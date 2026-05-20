@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Caprasimo&display=swap');
+/*REFERÊNCIA HOME: https://visitbrasil.com/pt/location/salvador-pt/ */
+
+:root {
+    /* Fontes */ 
+    --font-title: 'Caprasimo', serif;
+    --font-body: 'Amaranth', sans-serif;
+
+    /* Paleta de Cores */
+    --primary-color: #ffd046;
+    --second-color: #ce6c47;
+    --accent-color: #960200;
+    --background-color: #eadaa2;
+    --text-color: #241e4e;
+}
+
+body{
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    font-family: var(--font-title);
+    background-color: var(--primary-color);
+    padding: 10px;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 10px;
+    justify-content: center;
+}
+
+.card{
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(to bottom right, var(--primary-color), var(--second-color));
+    border-radius: 10px 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 350px;
+    width: 250px;
+}
+
+.card:hover {
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
+    transform: translateY(-5px);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content:space-around;
+    padding: 5px;
+}
+
+img {
+    border-radius: 10px 10px 0px 0px;
+}

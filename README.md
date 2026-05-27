@@ -20,7 +20,7 @@
   <li> Estrutura semântica em todas as páginas: header, main, section, article, aside, footer </li>
   <li> Meta tags SEO: title único, description e viewport em todas as páginas </li>
 </ul>
-<h3> U3 — CSS · JavaScript · PHP </h3>
+<h3> U3 — CSS · JavaScript </h3>
   <ul>
     <li> Arquivo style.css externo vinculado a todas as páginas </li>
     <li> Variáveis CSS (--cor-primaria, --cor-acento, --fonte-titulo) declaradas no :root </li>

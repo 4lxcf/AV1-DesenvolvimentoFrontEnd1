@@ -14,13 +14,51 @@
     --text-color: #241e4e;
 }
 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     font-family: var(--font-body);
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
 }
+
+main{
+    margin: 0.8rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+#principais-pratos h2{
+    font-size: 2.7rem;
+    text-align: center;
+}
+
+#principais-pratos > p:first-of-type  {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#principais-pratos{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; 
+}
+
+
+
+.texto-prato{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
 
 header{
     display: flex;
@@ -28,6 +66,24 @@ header{
     background-color: var(--primary-color);
     padding: 10px;
     justify-content: center;
+}
+
+nav{
+
+    
+}
+
+h1{
+    display: none;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    display: flex;
+  }
+  nav{
+    display: none;
+  }
 }
 
 footer {

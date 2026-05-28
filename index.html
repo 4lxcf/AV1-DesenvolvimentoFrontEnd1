@@ -8,41 +8,50 @@
     <!--Link para o CSS-->
     <link rel = "stylesheet" href = "style.css">
 </head>
+
 <body>
     <main>
     <!--Simbolo de localização + nome da cidade-->
     <!--Aqui podemos adicionar o clima de salvador em tempo real, conforme ref do site utilizado como base.-->
-    <div class = "logo">
-    <h1>Farol Turismo Digital | Turismo Salvador Bahia</h1>
-    </div>
+        <div class = "logo">
+        <h1>Farol Turismo Digital | Turismo Salvador Bahia</h1>
+        </div>
 
+<header>
+    <nav aria-label="Menu principal">
+        <ul class="menu">
+            <li><a href="Introducao.html">Introdução</a></li>
+            <li><a href="pontos_turisticos.html">Pontos Turísticos</a></li>
+            <li><a href="gastronomia.html">Gastronomia</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+</nav>
 
-    <nav>
-        <ul class = "menu"> <!--Menu de navegação-->
+    <nav aria-label = "Navegação Interna">
+        <ul class = "menu"> 
             <li><a href = "#curiosidades">Curiosidades</a></li>
             <li><a href = "#religiosidade">Religiosidade</a></li>
             <li><a href = "#gastronomia">Gastronomia</a></li>
             <li><a href = "#praias">Praias</a></li>
             <li><a href = "#pontos_turisticos">Pontos Turísticos</a></li>
             <li><a href = "#passeios">Passeios</a></li>
-            <li><a href = "#hospedagem">Hospedagem</a></li>
-            <li><a href = "#restaurantes">Restaurantes</a></li>
-            <li><a href = "#eventos">Eventos</a></li>
-            <li><a href = "#cultura">Cultura</a></li>
         </ul>
     </nav>
+</header>
 
 <!-- Sections comentadas (será implementada depois ou projeto pessoal.) -->
 <!---
 <section id = "passeios"></section>
-<section id = "hospedagem"></section>
-<section id = "restaurantes"></section>
+<section id = "hospedagem"></section> "n feito"
+<section id = "restaurantes"></section> "n feito"
 <section id = "eventos"></section>
-<section id = "cultura"></section>
+<section id = "cultura"></section> "n feito"
 -->
 <h2>Aqui você vai encontrar tudo sobre os pontos turísticos de Salvador Bahia.</h2>
-<p>Salvador é uma cidade marcada pela mistura única de cultura, história e beleza natural. Conhecida pelas praias, pela música vibrante e pelo forte legado afro-brasileiro, a capital baiana encanta moradores e visitantes com sua energia acolhedora, gastronomia típica e paisagens inesquecíveis.</p>
+<aside>Salvador é uma cidade marcada pela mistura única de cultura, história e beleza natural. Conhecida pelas praias, pela música vibrante e pelo forte legado afro-brasileiro, a capital baiana encanta moradores e visitantes com sua energia acolhedora, gastronomia típica e paisagens inesquecíveis.</aside>
 <hr>
+
 <section>
 <h2>Curiosidades sobre a nossa cidade:</h2>
 
@@ -52,14 +61,36 @@
 <p>Salvador é considerada a cidade com a maior população negra fora da África, o que influencia diretamente a nossa culinária, religião e a música.</p>
 </section>
 <hr>
+
 <section>
 <h2>Religiosidade</h2>
-<p>Salvador praticamente o berço do sincretismo religioso. A convivência entre o Catolicismo e o Candomblé criou tradições únicas, como a <strong>Lavagem do Bonfim</strong>, onde as baianas lavam as escadarias da igreja com água de cheiro e flores. Essa espiritualidade está presente em cada esquina, nos colares de contas (guias) e nas roupas brancas de sexta-feira.</p>
+
+<article>
+    <h3>Sincretismo Religioso</h3>
+    <figure><!--Foto-->
+    <img src = "img/sincretismo_religioso.jpg" alt = "Sincretismo Religioso">
+    <figcaption>Salvador é conhecida por seu sincretismo religioso, onde o Catolicismo e o Candomblé coexistem harmoniosamente, criando tradições únicas como a Lavagem do Bonfim.</figcaption>
+    </figure>
+    <p>Salvador praticamente o berço do sincretismo religioso. A convivência entre o Catolicismo e o Candomblé criou tradições únicas, como a <strong>Lavagem do Bonfim</strong>, onde as baianas lavam as escadarias da igreja com água de cheiro e flores. Essa espiritualidade está presente em cada esquina, nos colares de contas (guias) e nas roupas brancas de sexta-feira.</p>
+</article>
+
+<article>
+    <h3>Candomblé</h3>
+    <figure><!--Foto-->
+    <img src = "img/candomble.jpg" alt = "Candomblé">
+    <figcaption>O Candomblé é uma religião afro-brasileira que tem suas raízes na cultura africana e é amplamente praticada em Salvador, influenciando a música, a dança e as tradições locais.</figcaption>
+    </figure>
+    <p>O Candomblé é uma religião afro-brasileira que tem suas raízes na cultura africana e é amplamente praticada em Salvador. Os terreiros de Candomblé são espaços sagrados onde os fiéis se reúnem para cultuar os orixás, divindades que representam forças da natureza e aspectos da vida humana. O Candomblé influencia profundamente a música, a dança e as tradições locais, sendo uma parte essencial da identidade cultural de Salvador.</p>
+</article>
+
 </section>
 <hr>
+
+
 <section id = "gastronomia">
 <h2>Gastronomia</h2>
 <p>A comida baiana é um festival sensorial. O <strong>Dendê</strong> por exemplo, é o rei da cozinha baiana.</p>
+
 <ul>
     <li>Acarajé</li>
     <li>Abará</li>
@@ -76,73 +107,46 @@
 <hr>
 
 <section id = "praias">
-<h3>Praias Turísticas de Salvador</h3>
-<ul>
-<li><h4>Praia do Porto da Barra</h4>
-<img src = "img/praias/porto_da_barra.jpg" alt = "Praia do Porto da Barra">
-<!--Foto-->
-<p>Uma das praias mais famosas de Salvador. Possui águas calmas, ótimas para banho e para assistir ao pôr do sol. É basicamente um dos cartões-postais da cidade.</p>
-</li>
+<h2>Praias Turísticas de Salvador</h2>
 
-<li><h4>Praia do Farol da Barra</h4>
-<img src = "img/praias/farol_da_barra.jpg" alt = "Praia do Farol da Barra">
-<!--Foto-->
-<p>Muito conhecida pelo Farol da Barra e pelo forte histórico. Além da beleza natural, é um dos principais pontos turísticos e palco do Carnaval de Salvador.</p>
-</li>
+<article>
+    <h3>Praia do Porto da Barra</h3>
+    <figure><!--Foto-->
+    <img src = "img/praias/porto_da_barra.jpg" alt = "Praia do Porto da Barra">
+    <figcaption>famosa por suas águas cristalinas, mar calmo em formato de enseada e por ser um dos únicos locais no Brasil onde o sol se põe diretamente no mar</figcaption>
+    </figure>
+    <p>Uma das praias mais famosas de Salvador. Possui águas calmas, ótimas para banho e para assistir ao pôr do sol. É basicamente um dos cartões-postais da cidade.</p>
+</article>
 
-<li><h4>Praia de Itapuã</h4>
-<img src = "img/praias/itapua.jpg" alt = "Praia de Itapuã">
-<!--Foto-->
-<p>Famosa pelas músicas de Dorival Caymmi e Vinícius de Moraes. Tem coqueiros, jangadas e o tradicional Farol de Itapuã, sendo um dos locais mais clássicos da cidade.</p>
-</li>
+<article>
+    <h3>Praia do Farol da Barra</h3>
+    <figure> <!--Foto-->
+    <img src = "img/praias/farol_da_barra.jpg" alt = "Praia do Farol da Barra">
+    <figcaption>Localizada na região da Barra, é uma das praias mais icônicas de Salvador, conhecida por seu farol histórico e por ser um dos principais pontos turísticos da cidade.</figcaption>
+    </figure>
+    <p>Muito conhecida pelo Farol da Barra e pelo forte histórico. Além da beleza natural, é um dos principais pontos turísticos e palco do Carnaval de Salvador.</p>
+</article>
 
-<li><h4>Praia de Ondina</h4>
-<img src = "img/praias/ondina.jpg" alt = "Praia de Ondina">
-<!--Foto-->
-<p>Localizada em uma região nobre da cidade, possui piscinas naturais formadas por recifes e uma ótima infraestrutura turística.</p>
-</li>
+<article>
+    <h3>Praia de Itapuã</h3>
+    <figure> <!--Foto-->
+    <img src = "img/praias/itapua.jpg" alt = "Praia de Itapuã">
+    <figcaption>Localizada na zona sul de Salvador, é famosa por suas águas calmas, coqueiros e pelo tradicional Farol de Itapuã, sendo um dos locais mais clássicos da cidade.</figcaption>
+    </figure>
+    <p>Famosa pelas músicas de Dorival Caymmi e Vinícius de Moraes. Tem coqueiros, jangadas e o tradicional Farol de Itapuã, sendo um dos locais mais clássicos da cidade.</p>
+</article>
 
-</ul>
-</section>
-<hr>
-<section id = "pontos_turisticos">
-<h2>Pontos Turísticos de Salvador</h2>
-<ul>
-<li><h4>Pelourinho</h4>
-<img src = "img/pelourinho.jpg" alt = "Pelourinho">
-<!--Foto-->
-<p>O Pelourinho é o centro histórico de Salvador e um dos locais mais famosos da Bahia. Conhecido pelas casa coloridas, ruas de pedra e igrejas antigas, o local representa a forte cultura afro-brasileira. Além da arqueitetura histórica, o Pelourinho possui apresentações musicais, restaurantes típicos e manifestações culturais durante todo o ano.</p>
-</li>
+<article>
+    <h3>Praia de Ondina</h3>
+    <figure> <!--Foto-->
+    <img src = "img/praias/ondina.jpg" alt = "Praia de Ondina">
+    <figcaption>Localizada em uma região nobre da cidade, possui piscinas naturais formadas por recifes e uma ótima infraestrutura turística.</figcaption>
+    </figure>
+    <p>Localizada em uma região nobre da cidade, possui piscinas naturais formadas por recifes e uma ótima infraestrutura turística.</p>
+</article>
 
-
-<li><h4>Elevador Lacerda</h4>
-<img src = "img/elevador_lacerda.jpg" alt = "Elevador Lacerda">
-<!--Foto-->
-<p>O Elevador Lacerda é um dos principais cartões-postais de Salvador. Inaugurado em 1873, ele liga a Cidade Alta à Cidade Baixa, facilitando o transporte entre as duas regiões. Do alto do elevador é possível observar uma bela vista da Baía de Todos-os-Santos.</p>
-</li>
-
-<li><h4>Mercado Modelo</h4>
-<img src = "img/mercado_modelo.jpg" alt = "Mercado Modelo">
-<!--Foto-->
-
-<p>Localizado próximo ao Elevador Lacerda, o Mercado Modelo é um dos lugares mais visitados pelos turistas. O espaço reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia. É um ótimo lugar para conhecer a cultura local e comprar souvenirs.</p>
-</li>
-
-<li><h4>Igreja do Bonfim</h4>
-<img src = "img/igreja_do_bonfim.jpg" alt ="Igreja do Bonfim">
-<!--Foto-->
-<p>A Igreja do Senhor do Bonfim é um dos símbolos religiosos mais importantes da Bahia. Ela ficou famosa pelas fitinhas coloridas do Bonfim e pela tradicional Lavagem do Bonfim, festa religiosa e cultural que reúne milhares de pessoas todos os anos.</p>
-</li>
-
-</ul>
-</section>
-
-<footer>
-        <p>© 2026 Visita Salvador - Portal de Turismo</p>
-</footer>
+<footer><p>© 2026 Farol Turismo Digital - Portal de Turismo</p></footer>
 
     </main>
 </body>
-
-
 </html>

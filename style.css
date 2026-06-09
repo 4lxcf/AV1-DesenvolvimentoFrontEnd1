@@ -1,18 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-/*REFERÊNCIA HOME: https://visitbrasil.com/pt/location/salvador-pt/ */
 
 :root {
     /* Fontes */ 
     --font-title: 'Montserrat', sans-serif;
-    --font-body: '', ;
+    --font-body: 'Lora', serif;
 
     /* Paleta de Cores */
-    --primary-color: #ffd046;
-    --second-color: #ce6c47;
-    --accent-color: #960200;
-    --background-color: #eadaa2;
+    --primary-color: #241e4e;
+    --accent-color: #ffd046;
     --header-text-color: white;
-    --text-color: #241e4e;
 }
 
 *{
@@ -23,8 +19,8 @@
 
 body{
     font-family: var(--font-body);
-    background-color: white;
-    color: var(--text-color);
+    background-color: var(--header-text-color);
+    color: var(--primary-color);
 }
 
 header{
@@ -32,7 +28,7 @@ header{
     flex-direction: column;
     font-family: var(--font-title);
     color: var(--header-text-color);
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     justify-content: space-around;
     align-items: center;
     font-size: 18px;
@@ -50,16 +46,31 @@ header{
     margin-top: 20px;
 }
 
+.sub-title{
+    font-size: 24px;
+    font-weight: 150;
+    margin: 0;
+}
+
 h2{
-    font-weight: 200;
-    font-size: 16px;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    margin: 3.5rem;
+}
+
+h3{
+    font-family: var(--font-title);
+    font-size: 24px;
+    height: 50px;
 }
 
 nav{
     font-size: 10px;
-    color: white;
+    color: var(--header-text-color);
     display: flex;
-    width: 20vw;
+    width: 25rem;
     justify-content: space-around;
     align-items: end;
     white-space: nowrap;
@@ -67,7 +78,7 @@ nav{
 
 a{
     text-decoration: none;
-    color: white;
+    color: var(--header-text-color);
 }
 
 main{
@@ -88,12 +99,6 @@ main{
     line-height: 35px;
 }
 
-#onde-comer h3{
-    font-size: 36px;
-    text-align: center;
-    height: 50px;
-    margin: 50px;
-}
 
 .first-img{
     width: 100%;
@@ -108,12 +113,12 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 420px;
+    height: 460px;
     border-radius: 15px 15px;
     flex: 1;
     margin: 25px;
     overflow: hidden;
-    box-shadow: 0px 2px 5px var(--primary-color);
+    box-shadow: 0px 2px 5px var(--accent-color);
 }
 
 figure{
@@ -131,16 +136,12 @@ figure > img{
     padding: 8px;
 }
 
-h3{
-    margin-bottom: 5px;
-}
-
 figcaption {
     display: none;
 }
 
 #novidades{
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     color: var(--header-text-color);
     padding: 25px;
     font-size: large;
@@ -151,211 +152,45 @@ p{
 }
 
 footer{
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     text-align: center;
 }
 
 #marca-dagua{
-    color: white;
+    color: var(--header-text-color);
     margin-bottom: 0px;
 }
 
-
-/* 
-#principais-pratos h2{
-    font-size: 2.7rem;
-    text-align: center;
+.dica-de-ouro{
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 100;
 }
 
-#principais-pratos > p:first-of-type  {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-#principais-pratos{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem; 
-}
-
-.prato-tipico{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 60vh;
-    gap: 15px;
-    margin-bottom: 30vh;
-}
-
-#img-acaraje{
-    width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-#img-acaraje:hover{
-    transform: translateY(-15px);
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-#fig-acaraje{
-    flex: 3;
-}
-
-#acaraje > .texto-prato{
-flex: 2;
-}
-
-#img-moqueca{
-    width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-#img-moqueca:hover{
-    transform: translateY(-15px);
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-#fig-moqueca{
-    flex: 3;
-}
-
-#moqueca > .texto-prato{
-    flex: 2;
-}
-
-#img-abara{
-    width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-#img-abara:hover{
-    transform: translateY(-15px);
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-#fig-abara{
-    flex: 2;
-}
-
-#abara > .texto-prato{
-flex: 3;
-}
-
-#img-vatapa{
-    width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-#img-vatapa:hover{
-    transform: translateY(-15px);
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-#fig-vatapa{
-    flex: 2;
-}
-
-#vatapa > .texto-prato{
-flex: 3;
-}
-
-#img-caruru{
-    width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-#img-caruru:hover{
-    transform: translateY(-15px);
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-#fig-caruru{
-    flex: 2;
-}
-
-#caruru > .texto-prato{
-flex: 3;
-}
-
-#img-cocada{
-    width: 100%;
-    max-height: 100%;
-    border-radius: 10px;
-}
-
-#img-cocada:hover{
-    transform: translateY(-15px);
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
-}
-
-#fig-cocada{
-    flex: 2;
-}
-
-#cocada > .texto-prato{
-flex: 3;
-} */
-
-
-/*
-h1{
-    display: none;
-}
-*/
-
-/* 
-@media (min-width: 768px) {
-  h1 {
-    display: flex;
-  }
-  nav{
-    display: none;
-  }
-}
-
-footer {
-    display: flex;
-    background-color: var(--primary-color);
-    padding: 10px;
-    justify-content: center;
-}
-
-
-
-.card{
-    /* background-color: var(--primary-color);
-    background: linear-gradient(to bottom right, var(--primary-color), var(--second-color));
-    border-radius: 10px 10px;
-    padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+.botao-dica {
+    font-size: 30px;  /* aumenta o emoji */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--header-text-color);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
     transition: all 0.3s ease;
-    text-align: center;
-    height: 350px;
+}
+
+.dica-turista {
+    display: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
     width: 250px;
-} 
-
-.card:hover {
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.4);
-    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content:space-around;
-    padding: 5px;
+.dica-turista.ativo {
+    display: block;
 }
-
-img {
-    border-radius: 10px 10px 0px 0px;
-}
-*/

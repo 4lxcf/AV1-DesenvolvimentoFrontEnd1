@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descubra sobre a gastronomia de Salvador Bahia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Gastronomia</title>
 </head>
@@ -11,7 +14,7 @@
     <header>
         <div class="title-header">
             <h1>SALVADOR</h1>
-            <h2>BAHIA</h2>
+            <h2 class="sub-title">BAHIA</h2>
         </div>
         <nav id="navegacao">
             <a href="">Introdução</a>
@@ -25,18 +28,19 @@
     <main>
         <section id="onde-comer">
             <img src="./assets/img/comida_baiana.avif" alt="Comida Baiana" class="first-img">
-            <h3>Onde comer em Salvador?</h3>
-            <p>Do charme boêmio do Rio Vermelho ao coração histórico do Pelourinho, Salvador é um verdadeiro banquete a céu aberto. A cidade é repleta de esquinas perfumadas pelo azeite de dendê das tradicionais baianas de acarajé, patrimônio que alimenta a alma. Além de abrigar restaurantes incríveis que misturam a culinária ancestral com a alta gastronomia contemporânea. Seja de frente para o mar da Barra ou nas ladeiras históricas, comer em Salvador é vivenciar uma experiência cultural inesquecível em cada esquina.</p>
+            <h2>Onde comer em Salvador?</h2>
+            <p>A comida baiana é um verdadeiro <em>festival sensorial</em>. Do charme boêmio do Rio Vermelho ao coração histórico do Pelourinho, Salvador é um verdadeiro banquete a céu aberto. A cidade é repleta de <strong>esquinas perfumadas pelo azeite de dendê</strong> das tradicionais baianas de acarajé, <em>patrimônio</em> que alimenta a alma. Além de abrigar restaurantes incríveis que misturam a culinária ancestral com a alta gastronomia contemporânea. Seja de frente para o mar da Barra ou nas ladeiras históricas, comer em Salvador é vivenciar uma <strong>experiência cultural inesquecível</strong> em cada esquina.</p>
             
-            <aside class="dica-turista">
-                <h4>Dica de Ouro do Turista</h4>
-                <p>Se você quer o circuito raiz, vá ao Rio Vermelho no fim da tarde para comer o acarajé de Cira ou de Regina. Para uma moqueca com vista para a Baía de Todos-os-Santos, a Gamboa e a Pedra Furada são paradas obrigatórias!</p>
-            </aside>    
+            <div class="dica-de-ouro">
+                <button class="botao-dica" onclick="toggleDica()">💡</button>
+                <aside class="dica-turista" id="dica">
+                    <h4>Dica de Ouro do Turista</h4>
+                    <p><br>Se você quer o circuito raiz, vá ao Rio Vermelho no fim da tarde para comer o acarajé de Cira ou de Regina! <br> Para uma moqueca com vista para a Baía de Todos-os-Santos: a Gamboa ou Pedra Furada são paradas obrigatórias!</p>
+                </aside>    
+            </div>
         </section>
-        
-        <h2>GASTRONOMIA</h2>
-        <p>A comida baiana é um festival sensorial.<br>O <strong>Dendê</strong> por exemplo, é o rei da cozinha baiana.</p>
 
+        <h2>Principais Pratos Típicos</h2>
         <section id="principais-pratos">
             <article>
                 <figure>
@@ -89,7 +93,7 @@
                 </figure>
                 <div class="texto-prato">
                     <h3>Caruru</h3>
-                    <p>Um dos acompanhamentos mais tradicionais da culinária baiana e possui forte ligação religiosa. Feito à base de quiabo picado, camarão seco, amendoim, castanhas e azeite de dendê, o prato tem uma textura única e é presença marcante nas famosas festas de São Cosme e Damião na Bahia.</p>
+                    <p>Um dos acompanhamentos mais tradicionais da culinária baiana e possui forte ligação religiosa. Feito à base de quiabo picado, camarão seco, amendoim, castanhas e azeite de dendê, o prato tem textura única e é presença marcante nas famosas festas de São Cosme e Damião.</p>
                 </div>
             </article>
 

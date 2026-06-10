@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Fontes */ 
+    --font-title: 'Montserrat', sans-serif;
+    --font-body: 'Lora', serif;
+
+    /* Paleta de Cores */
+    --primary-color: #241e4e;
+    --accent-color: #ffd046;
+    --header-text-color: white;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font-body);
+    background-color: var(--header-text-color);
+    color: var(--primary-color);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-title);
+    color: var(--header-text-color);
+    background-color: var(--primary-color);
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    height: 150px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.title-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sub-title{
+    font-size: 24px;
+    font-weight: 150;
+    margin: 0;
+}
+
+h2{
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    margin: 3.5rem;
+}
+
+h3{
+    font-family: var(--font-title);
+    font-size: 24px;
+    height: 50px;
+}
+
+nav{
+    font-size: 10px;
+    color: var(--header-text-color);
+    display: flex;
+    width: 25rem;
+    justify-content: space-around;
+    align-items: end;
+    white-space: nowrap;
+}
+
+a{
+    text-decoration: none;
+    color: var(--header-text-color);
+}
+
+main{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+}
+
+#onde-comer{
+    display: flex;
+    flex-direction: column;
+}
+
+#onde-comer > p{
+    font-size: 24px;
+    text-align: justify;
+    margin: 0px 300px 100px 300px;
+    line-height: 35px;
+}
+
+
+.first-img{
+    width: 100%;
+}
+
+#principais-pratos{
+    display: flex;
+    align-items: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 460px;
+    border-radius: 15px 15px;
+    flex: 1;
+    margin: 25px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px var(--accent-color);
+}
+
+figure{
+    width: 100%;
+}
+
+figure > img{
+    height: 200px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    object-fit: cover;
+}
+
+.texto-prato{
+    padding: 8px;
+}
+
+figcaption {
+    display: none;
+}
+
+#novidades{
+    background-color: var(--primary-color);
+    color: var(--header-text-color);
+    padding: 25px;
+    font-size: large;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+#marca-dagua{
+    color: var(--header-text-color);
+    margin-bottom: 0px;
+}
+
+.dica-de-ouro{
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 100;
+}
+
+.botao-dica {
+    font-size: 30px;  /* aumenta o emoji */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--header-text-color);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+}
+
+.dica-turista {
+    display: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.dica-turista.ativo {
+    display: block;
+}

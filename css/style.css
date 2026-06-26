@@ -23,6 +23,10 @@ body{
     color: var(--primary-color);
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 header{
     display: flex;
     flex-direction: column;
@@ -32,7 +36,7 @@ header{
     justify-content: space-around;
     align-items: center;
     font-size: 18px;
-    height: 150px;
+    height: 18vh;
     position: fixed;
     width: 100%;
     top: 0;
@@ -67,18 +71,20 @@ h3{
 }
 
 nav{
-    font-size: 10px;
+    font-size: 1.5vw;
     color: var(--header-text-color);
     display: flex;
-    width: 25rem;
+    width: 100%;
     justify-content: space-around;
     align-items: end;
     white-space: nowrap;
 }
 
+
 a{
     text-decoration: none;
     color: var(--header-text-color);
+    transition: all 0.3s ease;
 }
 
 main{
@@ -92,11 +98,13 @@ main{
     flex-direction: column;
 }
 
-#onde-comer > p{
+#onde-comer > p {
     font-size: 24px;
     text-align: justify;
-    margin: 0px 300px 100px 300px;
     line-height: 35px;
+    max-width: 800px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px; 
 }
 
 
@@ -107,6 +115,8 @@ main{
 #principais-pratos{
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 article{
@@ -115,10 +125,15 @@ article{
     align-items: center;
     height: 460px;
     border-radius: 15px 15px;
-    flex: 1;
     margin: 25px;
-    overflow: hidden;
+    overflow: scroll;
     box-shadow: 0px 2px 5px var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+article:hover{
+    cursor:pointer;
+    transform: scale(1.1);
 }
 
 figure{
@@ -193,4 +208,58 @@ footer{
 
 .dica-turista.ativo {
     display: block;
+}
+
+
+@media (max-width: 768px) {
+    
+    #principais-pratos {
+        flex-direction: column;
+    }
+    
+    #onde-comer > p {
+        font-size: 18px; /* Redução da escala tipográfica para mobile */
+        margin-bottom: 50px;
+    }
+    
+    header{
+        position:sticky;
+        height: 30vw;
+    }
+
+    .title-header h1{
+        font-size: 7vw;
+    }
+
+    .title-header h2{
+        font-size: 5vw;
+    }
+
+    nav{
+        font-size: 2.5vw;
+    }
+
+    article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 460px;
+    border-radius: 15px 15px;
+    flex: 1;
+    margin: 25px;
+    overflow: scroll;
+    box-shadow: 0px 2px 5px var(--accent-color);
+}
+}
+
+
+@media (min-width: 768px){
+    article{
+        width: 25vw;
+    }
+}
+
+
+nav a:hover{
+    transform: scale(1.2);
 }

@@ -71,7 +71,7 @@ h3{
 }
 
 nav{
-    font-size: 1.5vw;
+    font-size: min(1.2em, 40px);
     color: var(--header-text-color);
     display: flex;
     width: 100%;
@@ -126,15 +126,12 @@ article{
     height: 460px;
     border-radius: 15px 15px;
     margin: 25px;
-    overflow: scroll;
+    overflow: hidden;
     box-shadow: 0px 2px 5px var(--accent-color);
     transition: all 0.3s ease;
 }
 
-article:hover{
-    cursor:pointer;
-    transform: scale(1.1);
-}
+
 
 figure{
     width: 100%;
@@ -250,6 +247,9 @@ footer{
     overflow: scroll;
     box-shadow: 0px 2px 5px var(--accent-color);
 }
+    .botao-dica{
+    transform: translate(40px,-40px);
+    }
 }
 
 
@@ -257,6 +257,11 @@ footer{
     article{
         width: 25vw;
     }
+
+    article:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+}
 }
 
 

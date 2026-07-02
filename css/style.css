@@ -47,7 +47,6 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
 }
 
 .sub-title{
@@ -262,4 +261,128 @@ footer{
 
 nav a:hover{
     transform: scale(1.2);
+}
+
+
+.logo{
+    width: 100%;
+}
+.logo h1{
+    font-size: 2.6vw;
+    text-align: center;
+}
+
+.menu{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+section.destaque{
+background-color: var(--primary-color);
+height: 50vh;
+text-align: center;
+}
+section.destaque h2{
+    color: var(--header-text-color);
+}
+
+.section-home p {
+    line-height: 35px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+#footer{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer p{
+    margin: 0;
+    color: var(--header-text-color);
+}
+
+#curiosidade{
+    padding: 16px;
+    margin: 20px 15px;
+    border-radius: 12px;
+    border-left: 5px solid #ffb703;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border: 2px solid var(--accent-color);
+}
+
+#curiosidade h3{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+#curiosidade p{
+    line-height: 1.6;
+}
+
+@media (min-width:768px) {
+    header{
+        position: relative;
+    }
+
+    body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+    main{
+    flex: 1;
+    display: flex;
+}
+    p, a{
+        font-size: 1.6rem;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 2.7rem;
+    }
+    h3{
+        font-size: 3rem;
+    }
+    .hero{
+        display: flex;
+        height: 60vh;
+    }
+    section.hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 3;
+    }
+    #curiosidade{
+        width: 15vw;
+    }
+
+    #pontos-turisticos{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    
+    .ponto-turistico{
+    width: 70vw;
+    justify-self: center;
+
+}
+
 }

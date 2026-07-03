@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
+    const painelSucesso = document.getElementById("painelSucesso");
+
     const inputNome = document.getElementById("nome");
     const inputTelefone = document.getElementById("telefone");
     const inputEmail = document.getElementById("email");
@@ -12,33 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const erroAssunto = document.getElementById("erroAssunto");
     const erroMensagem = document.getElementById("erroMensagem");
 
-    /**
-    * Aplica ou remove as classes .valido / .invalido no input
-    * e exibe ou limpa a mensagem de erro no span correspondente.
-    *
-    * @param {HTMLInputElement} input  - O campo a ser validado
-    * @param {HTMLElement}      span   - O span que exibe o erro
-    * @param {boolean}          ok     - true = válido, false = inválido
-    * @param {string}           msg    - Mensagem a exibir quando inválido
-    * @returns {boolean}               - Retorna o valor de "ok"
-    */
- 
     function aplicarEstado(input, span, ok, msg) {
-        input.className  = ok ? 'valido' : 'invalido';
-        span.textContent = ok ? ''       : msg;
+        if (input && input.classList) {
+            input.className = ok ? 'valido' : 'invalido';
+        }
+        if (span) {
+            span.textContent = ok ? '' : msg;
+        }
         return ok;
     }
 
     function validarNome() {
         const valor = inputNome.value.trim();
-
-        if (valor.length === 0) {
-            return aplicarEstado(inputNome, erroNome, false, 'O nome é obrigatório.');
-        }
-        if (valor.length < 3) {
-            return aplicarEstado(inputNome, erroNome, false, 'Mínimo de 3 caracteres.');
-        }
-
+        if (valor.length === 0) return aplicarEstado(inputNome, erroNome, false, 'O nome é obrigatório.');
+        if (valor.length < 3) return aplicarEstado(inputNome, erroNome, false, 'Mínimo de 3 caracteres.');
         return aplicarEstado(inputNome, erroNome, true, '');
     }
 
@@ -49,61 +38,40 @@ document.addEventListener("DOMContentLoaded", () => {
         if (valor.length === 0) {
             return aplicarEstado(inputTelefone, erroTelefone, false, 'O Telefone é obrigatório.');
         }
-        if (valor.length > 0) {
-            formatado += "(" + valor.substring(0, 2);
-        }
-        if (valor.length > 2) {
-            formatado += ") " + valor.substring(2, 7);
-        }
-        if (valor.length > 7) {
-            formatado += "-" + valor.substring(7, 11);
-        }
+
+        if (valor.length > 0) formatado += "(" + valor.substring(0, 2);
+        if (valor.length > 2) formatado += ") " + valor.substring(2, 7);
+        if (valor.length > 7) formatado += "-" + valor.substring(7, 11);
+
+        inputTelefone.value = formatado;
+
         if (valor.length !== 11) {
             return aplicarEstado(inputTelefone, erroTelefone, false, 'Digite os 11 números do telefone (incluindo DDD).');
         }
 
-        inputTelefone.value = formatado;
         return aplicarEstado(inputTelefone, erroTelefone, true, '');
     }
 
     function validarEmail() {
         const valor = inputEmail.value.trim();
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (valor.length === 0) {
-            return aplicarEstado(valor, erroEmail, false, 'O e-mail é obrigatório.');
-        }
-        if (!regex.test(valor)) {
-            return aplicarEstado(valor, erroEmail, false, 'Digite um e-mail válido.');
-        }
-
-        return aplicarEstado(valor, erroEmail, true, '');
+        if (valor.length === 0) return aplicarEstado(inputEmail, erroEmail, false, 'O e-mail é obrigatório.');
+        if (!regex.test(valor)) return aplicarEstado(inputEmail, erroEmail, false, 'Digite um e-mail válido.');
+        return aplicarEstado(inputEmail, erroEmail, true, '');
     }
 
     function validarAssunto() {
         const valor = inputAssunto.value.trim();
-
-        if (valor.length === 0) {
-            return aplicarEstado(valor, erroAssunto, false, 'O assunto é obrigatório.');
-        }
-        if (valor.length < 15) {
-            return aplicarEstado(valor, erroAssunto, false, 'Mínimo de 15 caracteres.');
-        }
-
-        return aplicarEstado(valor, erroAssunto, true, '');
+        if (valor.length === 0) return aplicarEstado(inputAssunto, erroAssunto, false, 'O assunto é obrigatório.');
+        if (valor.length < 15) return aplicarEstado(inputAssunto, erroAssunto, false, 'Mínimo de 15 caracteres.');
+        return aplicarEstado(inputAssunto, erroAssunto, true, '');
     }
 
     function validarMensagem() {
         const valor = inputMensagem.value.trim();
-
-        if (valor.length === 0) {
-            return aplicarEstado(valor, erroMensagem, false, 'Uma breve descrição é obrigatória.');
-        }
-        if (valor.length < 30) {
-            return aplicarEstado(valor, erroMensagem, false, 'Mínimo de 30 caracteres.');
-        }
-
-        return aplicarEstado(valor, erroMensagem, true, '');
+        if (valor.length === 0) return aplicarEstado(inputMensagem, erroMensagem, false, 'Uma breve descrição é obrigatória.');
+        if (valor.length < 30) return aplicarEstado(inputMensagem, erroMensagem, false, 'Mínimo de 30 caracteres.');
+        return aplicarEstado(inputMensagem, erroMensagem, true, '');
     }
 
     inputNome.addEventListener('input', validarNome);
@@ -115,51 +83,53 @@ document.addEventListener("DOMContentLoaded", () => {
     inputEmail.addEventListener('input', validarEmail);
     inputEmail.addEventListener('blur',  validarEmail);
 
-    inputNome.addEventListener('input', validarAssunto);
-    inputNome.addEventListener('blur',  validarAssunto);
+    inputAssunto.addEventListener('input', validarAssunto);
+    inputAssunto.addEventListener('blur',  validarAssunto);
 
-    inputNome.addEventListener('input', validarMensagem);
-    inputNome.addEventListener('blur',  validarMensagem);
+    inputMensagem.addEventListener('input', validarMensagem);
+    inputMensagem.addEventListener('blur',  validarMensagem);
 
     form.addEventListener('submit', function(event) {
-        // Impede o recarregamento padrão da página
         event.preventDefault();
 
-        // Roda todas as validações (mesmo que o usuário não tenha tocado nos campos)
-        const nomeOk      = validarNome();
-        const telefoneOk  = validarTelefone();
-        const emailOk     = validarEmail();
-        const assuntoOk   = validarAssunto();
-        const mensagemOk  = validarMensagem();
+        const nOk = validarNome();
+        const tOk = validarTelefone();
+        const eOk = validarEmail();
+        const aOk = validarAssunto();
+        const mOk = validarMensagem();
 
-        // Só prossegue se tudo for válido
-        if (nomeOk && telefoneOk && emailOk && assuntoOk && mensagemOk) {
+        console.log("Validações:", { nome: nOk, tel: tOk, email: eOk, assunto: aOk, msg: mOk });
+
+        if (nOk && tOk && eOk && aOk && mOk) {
             mostrarSucesso();
         }
     });
 
-    // Falta inserir o que vai aparecer quando for um sucesso!
-    function mostrarSucesso() {
-        // Oculta o formulário
+    function mostrarSucesso() {       
+        // 1. Oculta o formulário (isso está funcionando, certo?)
         form.style.display = 'none';
+        
+        // 2. Tenta adicionar a classe CSS original
+        painelSucesso.classList.add('visivel');
+        
+        // 3. Força a propriedade display diretamente no HTML para garantir que apareça
+        // Se você usa flexbox no CSS para centralizar, mude 'block' para 'flex'
+        painelSucesso.style.display = 'block'; 
     }
 
-    function reiniciar() {
-        // Limpa todos os campos
+    window.reiniciar = function() {
         form.reset();
 
-        // Remove classes de validação de todos os inputs
         [inputNome, inputTelefone, inputEmail, inputAssunto, inputMensagem].forEach(input => {
-            input.className = '';
+            if (input) input.className = '';
         });
 
-        // Limpa todas as mensagens de erro
         [erroNome, erroTelefone, erroEmail, erroAssunto, erroMensagem].forEach(span => {
-            span.textContent = '';
+            if (span) span.textContent = '';
         });
 
-        // Oculta o painel de sucesso e mostra o form novamente
-        // painelSucesso.classList.remove('visivel');
-        form.style.display = 'block';
-    }
+        painelSucesso.classList.remove('visivel');
+        painelSucesso.style.display = 'none';
+        form.style.display = 'flex';
+    };
 });

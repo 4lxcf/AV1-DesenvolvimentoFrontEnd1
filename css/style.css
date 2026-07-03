@@ -50,11 +50,11 @@ header {
 }
 
 .title-header h1 {
-    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-size: clamp(1.25rem, 2.1vw, 1.5rem);
 }
 
 .title-header h2 {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
 .sub-title {
@@ -81,16 +81,12 @@ a {
     text-decoration: none;
     color: var(--header-text-color);
     transition: all 0.3s ease;
-    font-size: clamp(2vw, 2.5vw, 1.7rem);
+    font-size: clamp(0.75rem, 1.05vw, 1.2rem);
 }
+
 
 .logo {
     width: 100%;
-}
-
-.logo h1 {
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    text-align: center;
 }
 
 .menu {
@@ -100,16 +96,13 @@ a {
     justify-content: space-around;
 }
 
-h1 {
-    font-size: clamp(2rem, 4vw, 3rem);
-}
-
 h2 {
     font-family: var(--font-title);
     font-weight: 600;
     font-size: clamp(1.8rem, 3vw, 2.7rem);
     text-align: center;
-    margin: 3.5rem;
+    margin: 3.5rem 0;
+    width: 100%;
 }
 
 h3 {
@@ -152,14 +145,6 @@ main {
 
 .first-img {
     width: 100%;
-}
-
-/* --- Seção de Pratos --- */
-#principais-pratos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 
 article {
@@ -248,6 +233,7 @@ section.destaque h2 {
 
 #curiosidade p {
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* --- Componente Dica de Ouro --- */
@@ -371,6 +357,78 @@ footer {
     flex-direction: column;
 }
 
+#iemanja{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 10vw;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+/* --- Seção Fale Conosco --- */
+#fale-conosco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#fale-conosco p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* --- Formulário --- */
+#fale-conosco form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.campo-form2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-form2 label {
+    font-family: var(--font-title);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+}
+
+.campo-form2 input,
+.campo-form2 textarea {
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.campo-form2 textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#fale-conosco form button {
+    font-family: var(--font-title);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
 /* =========================================
    MEDIA QUERIES (TABLET & DESKTOP)
 ========================================= */
@@ -393,7 +451,7 @@ footer {
     }
 
     a{
-        font-size: clamp(1rem, 1.4vw, 1.6rem);
+        font-size: clamp(0.75rem, 1.05vw, 1.2rem);
     }
 
     #onde-comer > p {
@@ -401,14 +459,29 @@ footer {
     }
 
     #principais-pratos {
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2rem;
+        gap: 25px;
+        justify-items: center;
+        padding: 20px 0;
+    }
+
+    #principais-pratos h2 {
+        grid-column: 1 / -1;
     }
 
     article {
-        width: 25vw;
-        flex: initial;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+        height: 460px;
+        border-radius: 15px;
+        overflow-y: auto;
+        box-shadow: 0px 2px 5px var(--accent-color);
+        transition: all 0.3s ease;
     }
 
     .hero {
@@ -450,7 +523,7 @@ footer {
     }
 
     section.destaque{
-        height: 70vh;
+        height: 50vh;
     }
 
     .lista-destaques a{
@@ -469,8 +542,39 @@ footer {
         height: fit-content;
     }
 
-    #eventos{
+    .eventos{
         display: flex;
         flex-direction: row;
+    }
+
+    #iemanja{
+        display: flex;
+        flex-direction: row;
+        margin: 5vh 10vw;
+        padding: 5vh;
+        height: 30vh;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    #iemanja-content{
+        display: flex;
+        height: 100%;
+        width: 70%;
+        padding: 15px;
+    }
+
+    #iemanja-content p{
+        margin: auto 0;
+    }
+
+    #fale-conosco {
+        padding: 40px;
+    }
+
+    #fale-conosco form {
+        max-width: 700px;
     }
 }

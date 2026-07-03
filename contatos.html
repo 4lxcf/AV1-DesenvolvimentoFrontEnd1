@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Contate-nos</title>
 </head>
-</head>
 <body>
     <header>
         <div class="title-header">
@@ -27,7 +26,7 @@
     </header>
 
     <section id="fale-conosco">
-        <h3>Fale Conosco</h3>
+        <h2>Fale Conosco</h2>
         <p>Preencha os campos abaixo para entrar em contato com a nossa equipe.</p>
 
         <form action="#" method="POST">
@@ -39,22 +38,22 @@
             <br>
             <div class="campo-form2">
                 <label for="telefone">Seu Telefone:*</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(00)9000-0000" required>
+                <input type="number" id="telefone" name="telefone" placeholder="(00) 90000-0000" required>
             </div>
             <br>
             <div class="campo-form2">
-                <label for="endereco">Seu Endereço:*</label>
-                <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro, Cidade, Estado" required>
+                <label for="email">Seu Email:*</label>
+                <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
             </div>
             <br>
             <div class="campo-form2">
                 <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto" placeholder="Informe o motivo do contato:">
+                <input type="text" id="assunto" name="assunto" placeholder="Informe o motivo do contato">
             </div>
             <br>
             <div class="campo-form2">
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <label for="mensagem">Mensagem:*</label>
+                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
             </div>
             
             <button type="submit">Enviar Mensagem</button>

@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contate-nos">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Contate-nos</title>
-</head>
-<body>
-    <header>
-        <div class="title-header">
-            <h1>SALVADOR</h1>
-            <h2 class="sub-title">BAHIA</h2>
-        </div>
-        <nav id="navegacao">
-            <a href="index.html">Home</a>
-            <a href="pontos_turisticos.html">Pontos Turísticos</a>
-            <a href="gastronomia.html">Gastronomia</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="contatos.html">Contato</a>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contate-nos">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>Contate-nos</title>
+    </head>
+    <body>
+        <header>
+            <div class="title-header">
+                <h1>SALVADOR</h1>
+                <h2 class="sub-title">BAHIA</h2>
+            </div>
+            <nav id="navegacao">
+                <a href="index.html">Home</a>
+                <a href="pontos_turisticos.html">Pontos Turísticos</a>
+                <a href="gastronomia.html">Gastronomia</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="contatos.html">Contato</a>
+            </nav>
+        </header>
 
-    <section id="fale-conosco">
-        <h2>Fale Conosco</h2>
-        <p>Preencha os campos abaixo para entrar em contato com a nossa equipe.</p>
+        <section id="fale-conosco">
+            <h2>Fale Conosco</h2>
+            <p>Preencha os campos abaixo para entrar em contato com a nossa equipe.</p>
 
-        <form action="#" method="POST">
+            <form action="#" method="POST" novalidate>
 
-            <div class="campo-form2">
-                <label for="nome">Seu Nome:*</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                <div class="campo">
+                    <label for="nome">Seu Nome:*</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    <span class="erro" id="erroNome"></span>
+                </div>
+                <br>
+                <div class="campo">
+                    <label for="telefone">Seu Telefone:*</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 90000-0000" required>
+                    <span class="erro" id="erroTelefone"></span>
+                </div>
+                <br>
+                <div class="campo">
+                    <label for="email">Seu Email:*</label>
+                    <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
+                    <span class="erro" id="erroEmail"></span>
+                </div>
+                <br>
+                <div class="campo">
+                    <label for="assunto">Assunto:*</label>
+                    <input type="text" id="assunto" name="assunto" placeholder="Informe o motivo do contato" required>
+                    <span class="erro" id="erroAssunto"></span>
+                </div>
+                <br>
+                <div class="campo">
+                    <label for="mensagem">Mensagem:*</label>
+                    <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                    <span class="erro" id="erroMensagem"></span>
+                </div>
+                
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+
+            <!-- Painel de sucesso (oculto até o envio) -->
+            <div class="sucesso" id="painelSucesso">
+                <div class="icone-sucesso">✅</div>
+                <h2>Obrigado! Responderemos o seu contato em breve!</h2>
+                <button onclick="reiniciar()">Fazer novo cadastro</button>
             </div>
-            <br>
-            <div class="campo-form2">
-                <label for="telefone">Seu Telefone:*</label>
-                <input type="number" id="telefone" name="telefone" placeholder="(00) 90000-0000" required>
-            </div>
-            <br>
-            <div class="campo-form2">
-                <label for="email">Seu Email:*</label>
-                <input type="email" id="email" name="email" placeholder="user@gmail.com" required>
-            </div>
-            <br>
-            <div class="campo-form2">
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto" placeholder="Informe o motivo do contato">
-            </div>
-            <br>
-            <div class="campo-form2">
-                <label for="mensagem">Mensagem:*</label>
-                <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem aqui..." required></textarea>
-            </div>
-            
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </section>
-</body>
+        </section>
+        <script src="./js/contato.js"></script>
+    </body>
 </html>

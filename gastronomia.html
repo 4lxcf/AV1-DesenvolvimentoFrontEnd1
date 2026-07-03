@@ -1,116 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubra sobre a gastronomia de Salvador Bahia.">
-    <title>Gastronomia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <header>
-        <div class="title-header">
-            <h1>SALVADOR</h1>
-            <h2 class="sub-title">BAHIA</h2>
-        </div>
-        <nav id="navegacao">
-            <a href="index.html">Home</a>
-            <a href="pontos_turisticos.html">Pontos Turísticos</a>
-            <a href="gastronomia.html">Gastronomia</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="contatos.html">Contato</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="onde-comer">
-            <img src="./assets/img/comida_baiana.avif" alt="Comida Baiana" class="first-img">
-            <h2>Onde comer em Salvador?</h2>
-            <p>A comida baiana é um verdadeiro <em>festival sensorial</em>. Do charme boêmio do Rio Vermelho ao coração histórico do Pelourinho, Salvador é um verdadeiro banquete a céu aberto. A cidade é repleta de <strong>esquinas perfumadas pelo azeite de dendê</strong> das tradicionais baianas de acarajé, <em>patrimônio</em> que alimenta a alma. Além de abrigar restaurantes incríveis que misturam a culinária ancestral com a alta gastronomia contemporânea. Seja de frente para o mar da Barra ou nas ladeiras históricas, comer em Salvador é vivenciar uma <strong>experiência cultural inesquecível</strong> em cada esquina.</p>
-            
-            <div class="dica-de-ouro">
-                <button class="botao-dica" onclick="toggleDica()">💡</button>
-                <aside class="dica-turista" id="dica">
-                    <h3>Dica de Ouro do Turista</h3>
-                    <p><br>Se você quer o circuito raiz, vá ao Rio Vermelho no fim da tarde para comer o acarajé de Cira ou de Regina! <br> Para uma moqueca com vista para a Baía de Todos-os-Santos: a Gamboa ou Pedra Furada são paradas obrigatórias!</p>
-                </aside>    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Descubra sobre a gastronomia de Salvador Bahia.">
+        <title>Gastronomia</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="title-header">
+                <h1>SALVADOR</h1>
+                <h2 class="sub-title">BAHIA</h2>
             </div>
-        </section>
+            <nav id="navegacao">
+                <a href="index.html">Home</a>
+                <a href="pontos_turisticos.html">Pontos Turísticos</a>
+                <a href="gastronomia.html">Gastronomia</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="contatos.html">Contato</a>
+            </nav>
+        </header>
 
-        <section id="principais-pratos">
-            <h2>Principais Pratos Típicos</h2>
-            <article>
-                <figure>
-                    <img src="./assets/img/acaraje-1-1.webp" alt="Acarajé montado com vatapá, salada e camarão.">
-                    <figcaption>O tradicional Acarajé baiano montado com vatapá, salada e camarão.</figcaption>
-                </figure>
-               <div class="texto-prato">
-                    <h3>Acarajé</h3>
-                    <p>É praticamente um patrimônio cultural! Feito de massa de feijão-fradinho que é frita no dendê.</p>
-               </div>
-            </article>
-
-            <article>
-                <figure class="fig-moqueca">
-                        <img src="./assets/img/moqueca.avif" alt="Moqueca baiana junto com acompanhamentos: arroz, pirão e farofa de dendê." id="img-moqueca">
-                        <figcaption>Moqueca baiana acompanhado de arroz, pirão feito com o próprio caldo da muqueca e a farofa de dendê. </figcaption>
-                </figure>
-                <div class="texto-prato">
-                    <h3>Moqueca Baiana</h3>     
-                    <p>É a tradução da identidade da Bahia em forma de cozido. Ela une perfeitamente peixe fresco, leite de coco, coentro e azeite de dendê. Servida na tradicional panela de barro, representa o calor e a ancestralidade do povo soteropolitano.</p>
-                </div>            
-            </article>
-
-            <article>
-                <figure class="fig-abara">
-                    <img src="./assets/img/abara.avif" alt="O tradional Abará baiano acompanhado por camarões, salada e caruru." id="img-abara">
-                    <figcaption>O tradicional abará acompanhado com camarões, salada e caruru. Formando a combinação perfeita!</figcaption>
-                </figure>
-                <div class="texto-prato">
-                    <h3>Abará</h3>
-                    <p>Irmão de massa do acarajé, o abará tem profunda importância histórica e espiritual. O seu grande diferencial está no preparo: a massa de feijão-fradinho com dendê não é frita. É embrulhada na folha de bananeira e cozida no vapor, ficando macia e muito saborosa.</p>
-                </div>     
-            </article>
-
-            <article>
-                <figure class="fig-vatapa">
-                    <img src="./assets/img/vatapa-baiano.jpg" alt="vatapá baiano" id="img-vatapa">
-                    <figcaption>Um belo vatapá baiano, que pode ser apreciado junto com o acarajé e o abará.</figcaption>
-                </figure>
-                <div class="texto-prato">
-                    <h3>Vatapá</h3>
-                    <p>É um dos acompanhamentos mais sagrados da culinária baiana. Trata-se de um creme super aveludado feito à base de pão, leite de coco, amendoim, castanha-de-caju, camarão seco e azeite de dendê, trazendo um equilíbrio perfeito de sabores que derrete na boca.</p>
+        <main>
+            <section id="onde-comer">
+                <img src="./assets/img/comida_baiana.avif" alt="Comida Baiana" class="first-img">
+                <h2>Onde comer em Salvador?</h2>
+                <p>A comida baiana é um verdadeiro <em>festival sensorial</em>. Do charme boêmio do Rio Vermelho ao coração histórico do Pelourinho, Salvador é um verdadeiro banquete a céu aberto. A cidade é repleta de <strong>esquinas perfumadas pelo azeite de dendê</strong> das tradicionais baianas de acarajé, <em>patrimônio</em> que alimenta a alma. Além de abrigar restaurantes incríveis que misturam a culinária ancestral com a alta gastronomia contemporânea. Seja de frente para o mar da Barra ou nas ladeiras históricas, comer em Salvador é vivenciar uma <strong>experiência cultural inesquecível</strong> em cada esquina.</p>
+                
+                <div class="dica-de-ouro">
+                    <button class="botao-dica" onclick="toggleDica()">💡</button>
+                    <aside class="dica-turista" id="dica">
+                        <h3>Dica de Ouro do Turista</h3>
+                        <p><br>Se você quer o circuito raiz, vá ao Rio Vermelho no fim da tarde para comer o acarajé de Cira ou de Regina! <br> Para uma moqueca com vista para a Baía de Todos-os-Santos: a Gamboa ou Pedra Furada são paradas obrigatórias!</p>
+                    </aside>    
                 </div>
-            </article>
+            </section>
 
-            <article>
-                <figure class="fig-caruru">
-                    <img src="./assets/img/caruru-cosme-e-damiao.avif" alt="Caruru baiano pronto" id="img-caruru">
-                    <figcaption>Um belo caruru na panela de barro, que pode ser apreciado junto de quase todos os principais pratos baianos.</figcaption>
-                </figure>
+            <section id="principais-pratos">
+                <h2>Principais Pratos Típicos</h2>
+                <article>
+                    <figure>
+                        <img src="./assets/img/acaraje-1-1.webp" alt="Acarajé montado com vatapá, salada e camarão.">
+                        <figcaption>O tradicional Acarajé baiano montado com vatapá, salada e camarão.</figcaption>
+                    </figure>
                 <div class="texto-prato">
-                    <h3>Caruru</h3>
-                    <p>Um dos acompanhamentos mais tradicionais da culinária baiana e possui forte ligação religiosa. Feito à base de quiabo picado, camarão seco, amendoim, castanhas e azeite de dendê, o prato tem textura única e é presença marcante nas famosas festas de São Cosme e Damião.</p>
+                        <h3>Acarajé</h3>
+                        <p>É praticamente um patrimônio cultural! Feito de massa de feijão-fradinho que é frita no dendê.</p>
                 </div>
-            </article>
+                </article>
 
-            <article>
-                <figure class="fig-cocada">
-                    <img src="./assets/img/cocada.avif" alt="Tradicional cocada baiana" id="img-cocada">
-                    <figcaption>Um belo doce baiano, muito apreciado pela maioria dos baianos.</figcaption>
-                </figure>
-                <div class="texto-prato">
-                    <h3>Cocada</h3>
-                    <p>Doce tradicional feito à base de coco ralado e açúcar, podendo ser branca, queimada ou cremosa.</p>
-                </div>
-            </article>
-        </section>
-    </main>
-    <footer id="footer">
-        <p id="marca-dagua">&copy; 2026 Turistando em Salvador - Projeto de Faculdade.</p>
-    </footer>
-</body>
+                <article>
+                    <figure class="fig-moqueca">
+                            <img src="./assets/img/moqueca.avif" alt="Moqueca baiana junto com acompanhamentos: arroz, pirão e farofa de dendê." id="img-moqueca">
+                            <figcaption>Moqueca baiana acompanhado de arroz, pirão feito com o próprio caldo da muqueca e a farofa de dendê. </figcaption>
+                    </figure>
+                    <div class="texto-prato">
+                        <h3>Moqueca Baiana</h3>     
+                        <p>É a tradução da identidade da Bahia em forma de cozido. Ela une perfeitamente peixe fresco, leite de coco, coentro e azeite de dendê. Servida na tradicional panela de barro, representa o calor e a ancestralidade do povo soteropolitano.</p>
+                    </div>            
+                </article>
+
+                <article>
+                    <figure class="fig-abara">
+                        <img src="./assets/img/abara.avif" alt="O tradional Abará baiano acompanhado por camarões, salada e caruru." id="img-abara">
+                        <figcaption>O tradicional abará acompanhado com camarões, salada e caruru. Formando a combinação perfeita!</figcaption>
+                    </figure>
+                    <div class="texto-prato">
+                        <h3>Abará</h3>
+                        <p>Irmão de massa do acarajé, o abará tem profunda importância histórica e espiritual. O seu grande diferencial está no preparo: a massa de feijão-fradinho com dendê não é frita. É embrulhada na folha de bananeira e cozida no vapor, ficando macia e muito saborosa.</p>
+                    </div>     
+                </article>
+
+                <article>
+                    <figure class="fig-vatapa">
+                        <img src="./assets/img/vatapa-baiano.jpg" alt="vatapá baiano" id="img-vatapa">
+                        <figcaption>Um belo vatapá baiano, que pode ser apreciado junto com o acarajé e o abará.</figcaption>
+                    </figure>
+                    <div class="texto-prato">
+                        <h3>Vatapá</h3>
+                        <p>É um dos acompanhamentos mais sagrados da culinária baiana. Trata-se de um creme super aveludado feito à base de pão, leite de coco, amendoim, castanha-de-caju, camarão seco e azeite de dendê, trazendo um equilíbrio perfeito de sabores que derrete na boca.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <figure class="fig-caruru">
+                        <img src="./assets/img/caruru-cosme-e-damiao.avif" alt="Caruru baiano pronto" id="img-caruru">
+                        <figcaption>Um belo caruru na panela de barro, que pode ser apreciado junto de quase todos os principais pratos baianos.</figcaption>
+                    </figure>
+                    <div class="texto-prato">
+                        <h3>Caruru</h3>
+                        <p>Um dos acompanhamentos mais tradicionais da culinária baiana e possui forte ligação religiosa. Feito à base de quiabo picado, camarão seco, amendoim, castanhas e azeite de dendê, o prato tem textura única e é presença marcante nas famosas festas de São Cosme e Damião.</p>
+                    </div>
+                </article>
+
+                <article>
+                    <figure class="fig-cocada">
+                        <img src="./assets/img/cocada.avif" alt="Tradicional cocada baiana" id="img-cocada">
+                        <figcaption>Um belo doce baiano, muito apreciado pela maioria dos baianos.</figcaption>
+                    </figure>
+                    <div class="texto-prato">
+                        <h3>Cocada</h3>
+                        <p>Doce tradicional feito à base de coco ralado e açúcar, podendo ser branca, queimada ou cremosa.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer id="footer">
+            <p id="marca-dagua">&copy; 2026 Turistando em Salvador - Projeto de Faculdade.</p>
+        </footer>
+        <script src="./js/gastronomia.js"></script>
+    </body>
 </html>

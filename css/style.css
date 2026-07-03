@@ -390,20 +390,20 @@ footer {
     gap: 20px;
 }
 
-.campo-form2 {
+.campo {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.campo-form2 label {
+.campo label {
     font-family: var(--font-title);
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     font-weight: 600;
 }
 
-.campo-form2 input,
-.campo-form2 textarea {
+.campo input,
+.campo textarea {
     font-family: var(--font-body);
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     padding: 12px;
@@ -411,7 +411,7 @@ footer {
     width: 100%;
 }
 
-.campo-form2 textarea {
+.campo textarea {
     resize: vertical;
     min-height: 120px;
 }

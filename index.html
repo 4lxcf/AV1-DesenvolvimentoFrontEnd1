@@ -3,200 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name= "description" content=" Principais pontos tuísticos de salvador e curiosidades sobre a cidade.">
-    <title>Farol Turismo Digital | Turismo Salvador Bahia</title>
-    <!--Link para o CSS-->
-    <link rel = "stylesheet" href = "style.css">
+    <meta name="description" content="Portal de Turismo em Salvador - Introdução, Cultura, Gastronomia e Pontos Turísticos.">
+    <title> Farol Turismo Digital | Introdução</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-    <!--Simbolo de localização + nome da cidade-->
-    <!--Aqui podemos adicionar o clima de salvador em tempo real, conforme ref do site utilizado como base.-->
-        <div class = "logo">
-        <h1>Farol Turismo Digital | Turismo Salvador Bahia</h1>
+    <header>
+        <div class="title-header">
+            <h1>SALVADOR</h1>
+            <h2 class="sub-title">BAHIA</h2>
         </div>
+        <nav id="navegacao">
+            <a href="index.html">Home</a>
+            <a href="pontos_turisticos.html">Pontos Turísticos</a>
+            <a href="gastronomia.html">Gastronomia</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="contatos.html">Contato</a>
+        </nav>
+    </header>
+    <main>
+        
+        <div class="hero">
+            <!-- Boas-vindas -->
+            <section class="section-home hero-content">
+                <h2>Bem-vindo ao Portal de Turismo</h2>
+                <p>Descubra Salvador: uma cidade marcada pela mistura única de cultura, história e beleza natural.</p>
+            </section>
+            
+            <!-- Curiosidade extra -->
+            <aside id="curiosidade">
+                <h3>Curiosidade</h3>
+                <p>Salvador foi a primeira capital do Brasil, fundada em 1549, e até hoje preserva tradições únicas que misturam influências de culturas africanas, indígenas e europeias.</p>
+            </aside>
+        </div>
+            
+            <!-- Destaques rápidos -->
+        <section class="section-home destaque">
+            <h2>Destaques do Portal</h2>
+            <ul class="lista-destaques">
+                <li><a href="pontos_turisticos.html">Explore os principais pontos turísticos</a></li>
+                <li><a href="gastronomia.html">Saboreie a culinária baiana</a></li>
+                <li><a href="eventos.html">Conheça os eventos e festas tradicionais</a></li>
+            </ul>
+        </section>
 
-<header>
-    <nav class = "menu_principal" aria-label = "Menu Principal">
-        <ul class = "Menu de Navegação">
-                <li><a href="introducao.html">Introducao</a></li>
-                <li><a href="pontos_turisticos.html">Pontos Turísticos</a></li>
-                <li><a href="gastronomia.html">Gastronomia</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-        </ul>
-
-    <nav class = "menu_da_pagina" aria-label = "Menu da Página">
-        <ul class = "menu"> 
-            <li><a href = "#curiosidades">Curiosidades</a></li>
-            <li><a href = "#religiosidade">Religiosidade</a></li>
-            <li><a href = "#gastronomia">Gastronomia</a></li>
-            <li><a href = "#praias">Praias</a></li>
-            <li><a href = "#pontos_turisticos">Pontos Turísticos</a></li>
-            <li><a href = "#passeios">Passeios</a></li>
-        </ul>
-    </nav>
-</header>
-
-<!-- Sections comentadas (será implementada depois ou projeto pessoal.) -->
-<!---
-<section id = "passeios"></section>
-<section id = "hospedagem"></section> "n feito"
-<section id = "restaurantes"></section> "n feito"
-<section id = "eventos"></section>
-<section id = "cultura"></section> "n feito"
--->
-<p>Aqui você vai encontrar tudo sobre os pontos turísticos de Salvador Bahia.</p>
-<aside>Salvador é uma cidade marcada pela mistura única de cultura, história e beleza natural. Conhecida pelas praias, pela música vibrante e pelo forte legado afro-brasileiro, a capital baiana encanta moradores e visitantes com sua energia acolhedora, gastronomia típica e paisagens inesquecíveis.</aside>
-<hr>
-
-<section>
-<h2>Curiosidades sobre a nossa cidade:</h2>
-
-<p>Você sabia que Salvador foi a primeira capital da colônia portuguesa das americas? Foi fundada em 1549 para ser o centro administrativo do país.</p>
-<p>O Primeiro Elevador urbano do mundo foi o elevador lacerda, inaugurado em 1873, conectando a Cidade Baixa à Cidade Alta.</p>
-<p>O maior Carnaval de Rua foi o de Salvador, registrado pelo Guinness Book como a maior festa de rua do <strong>planeta</strong>, atraindo milhões de foliões todos os anos.</p>
-<p>Salvador é considerada a cidade com a maior população negra fora da África, o que influencia diretamente a nossa culinária, religião e a música.</p>
-</section>
-<hr>
-
-<section>
-<h2>Religiosidade</h2>
-
-<article>
-    <h2>Sincretismo Religioso</h2>
-    <figure><!--Foto-->
-    <img src = "img/sincretismo_religioso.jpg" alt = "Sincretismo Religioso">
-    <figcaption>Salvador é conhecida por seu sincretismo religioso, onde o Catolicismo e o Candomblé coexistem harmoniosamente, criando tradições únicas como a Lavagem do Bonfim.</figcaption>
-    </figure>
-    <p>Salvador praticamente o berço do sincretismo religioso. A convivência entre o Catolicismo e o Candomblé criou tradições únicas, como a <strong>Lavagem do Bonfim</strong>, onde as baianas lavam as escadarias da igreja com água de cheiro e flores. Essa espiritualidade está presente em cada esquina, nos colares de contas (guias) e nas roupas brancas de sexta-feira.</p>
-</article>
-
-<article>
-    <h2>Candomblé</h2>
-    <figure><!--Foto-->
-    <img src = "img/candomble.jpg" alt = "Candomblé">
-    <figcaption>O Candomblé é uma religião afro-brasileira que tem suas raízes na cultura africana e é amplamente praticada em Salvador, influenciando a música, a dança e as tradições locais.</figcaption>
-    </figure>
-    <p>O Candomblé é uma religião afro-brasileira que tem suas raízes na cultura africana e é amplamente praticada em Salvador.
-        Os terreiros de Candomblé são espaços sagrados onde os fiéis se reúnem para cultuar os orixás, divindades que representam forças da natureza e aspectos da vida humana. O Candomblé influencia profundamente a música, a dança e as tradições locais, sendo uma parte essencial da identidade cultural de Salvador.</p>
-</article>
-
-</section>
-<hr>
-
-<section id = "gastronomia">
-<h2>Gastronomia</h2>
-    <article>
-    <p>A comida baiana é um festival sensorial. O <strong>Dendê</strong> por exemplo, é o rei da cozinha baiana.</p>
-<ul>
-    <li>Acarajé</li>
-    <aside>Um bolinho crocante de feijão-fradinho frito no azeite de dendê, cheio de sabor e marcado pela força das tradições baianas.</aside>
-    <li>Abará</li>
-    <aside>Parecido com o acarajé, mas cozido no vapor e envolto em folha de bananeira, oferecendo uma textura macia e um gosto suave e acolhedor.</aside>
-    <li>Vatapá</li>
-    <aside>Um creme rico e aromático feito com pão, leite de coco, camarão seco e dendê, que envolve o paladar com calor e especiarias.</aside>
-    <li>Caruru</li>
-    <Aside>Um preparo de quiabos cozidos com camarão seco e dendê, trazendo um sabor intenso e marcante da culinária afro-baiana.</Aside>
-    <li>Moqueca Baiana</li>
-    <Aside>Um ensopado perfumado de peixe com tomates, pimentões, leite de coco e dendê, que combina leveza, cor e sabor tropical. Se quiser, posso transformar essas descrições em um texto único, em parágrafo, com tom literário ou mais formal.</Aside>    
-</article>
-</ul>
-
-<p>Algumas dessas comidas viraram símbolos do estado da Bahia, principalmente o Acarajé e a Moqueca.</p>
-<p>A culinária baiana é uma das mais ricas culturalmente e  varia bastante entre regiões como o Recôncavo, Salvador, Chapada Diamantina e o sul da Bahia. Ainda assim, o dendê acaba sendo uma verdadeira "marca registrada" da cozinha baiana.</p>
-
-<!--Analisem também utilizarmos o efeito carrossel nessa seção de praias-->
-</section>
-<hr>
-
-<section id = "praias">
-<h2>Praias Turísticas de Salvador</h2>
-
-<article>
-    <h4>Praia do Porto da Barra</h4>
-    <figure><!--Foto-->
-    <img src = "img/praias/porto_da_barra.jpg" alt = "Praia do Porto da Barra">
-    <figcaption>famosa por suas águas cristalinas, mar calmo em formato de enseada e por ser um dos únicos locais no Brasil onde o sol se põe diretamente no mar</figcaption>
-    </figure>
-    <p>Uma das praias mais famosas de Salvador. Possui águas calmas, ótimas para banho e para assistir ao pôr do sol. É basicamente um dos cartões-postais da cidade.</p>
-</article>
-
-<article>
-    <h4>Praia do Farol da Barra</h4>
-    <figure> <!--Foto-->
-    <img src = "img/praias/farol_da_barra.jpg" alt = "Praia do Farol da Barra">
-    <figcaption>Localizada na região da Barra, é uma das praias mais icônicas de Salvador, conhecida por seu farol histórico e por ser um dos principais pontos turísticos da cidade.</figcaption>
-    </figure>
-    <p>Muito conhecida pelo Farol da Barra e pelo forte histórico. Além da beleza natural, é um dos principais pontos turísticos e palco do Carnaval de Salvador.</p>
-</article>
-
-<article>
-    <h4>Praia de Itapuã</h4>
-    <figure> <!--Foto-->
-    <img src = "img/praias/itapua.jpg" alt = "Praia de Itapuã">
-    <figcaption>Localizada na zona sul de Salvador, é famosa por suas águas calmas, coqueiros e pelo tradicional Farol de Itapuã, sendo um dos locais mais clássicos da cidade.</figcaption>
-    </figure>
-    <p>Famosa pelas músicas de Dorival Caymmi e Vinícius de Moraes. Tem coqueiros, jangadas e o tradicional Farol de Itapuã, sendo um dos locais mais clássicos da cidade.</p>
-</article>
-
-<article>
-    <h4>Praia de Ondina</h4>
-    <figure> <!--Foto-->
-    <img src = "img/praias/ondina.jpg" alt = "Praia de Ondina">
-    <figcaption>Localizada em uma região nobre da cidade, possui piscinas naturais formadas por recifes e uma ótima infraestrutura turística.</figcaption>
-    </figure>
-    <p>Localizada em uma região nobre da cidade, possui piscinas naturais formadas por recifes e uma ótima infraestrutura turística.</p>
-</article>
-
-<hr>
-<section id = "pontos_turisticos">
-<h2>Pontos Turísticos de Salvador</h2>
-
-
-<article>
-    <h4>Pelourinho</h4>
-    <figure><!--Foto-->
-    <img src = "img/pelourinho.jpg" alt = "Pelourinho">
-    <figcaption>O Pelourinho é o centro histórico de Salvador e um dos locais mais famosos da Bahia. Conhecido pelas casa coloridas, ruas de pedra e igrejas antigas, o local representa a forte cultura afro-brasileira. Além da arqueitetura histórica, o Pelourinho possui apresentações musicais, restaurantes típicos e manifestações culturais durante todo o ano.</figcaption>
-    </figure>
-    <p>O Pelourinho é o centro histórico de Salvador e um dos locais mais famosos da Bahia. Conhecido pelas casa coloridas, ruas de pedra e igrejas antigas, o local representa a forte cultura afro-brasileira. Além da arqueitetura histórica, o Pelourinho possui apresentações musicais, restaurantes típicos e manifestações culturais durante todo o ano.</p>
-</article>
-
-<article>
-    <h4>Elevador Lacerda</h4>
-    <figure><!--Foto-->
-    <img src = "img/elevador_lacerda.jpg" alt = "Elevador Lacerda">
-    <figcaption>o elevador lacerda é um dos principais cartões-postais de Salvador. Inaugurado em 1873, ele liga a Cidade Alta à Cidade Baixa, facilitando o transporte entre as duas regiões. Do alto do elevador é possível observar uma bela vista da Baía de Todos-os-Santos.</figcaption>
-    </figure>
-    <p>O Elevador Lacerda é um dos principais cartões-postais de Salvador. Inaugurado em 1873, ele liga a Cidade Alta à Cidade Baixa, facilitando o transporte entre as duas regiões. Do alto do elevador é possível observar uma bela vista da Baía de Todos-os-Santos.</p>
-</article>
-
-
-<article>
-    <h4>Mercado Modelo</h4>
-    <figure><!--Foto-->
-    <img src = "img/mercado_modelo.jpg" alt = "Mercado Modelo">
-    <figcaption>Localizado próximo ao Elevador Lacerda, o Mercado Modelo é um dos lugares mais visitados pelos turistas. O espaço reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia. É um ótimo lugar para conhecer a cultura local e comprar souvenirs.</figcaption>
-    </figure>
-    <p>Localizado próximo ao Elevador Lacerda, o Mercado Modelo é um dos lugares mais visitados pelos turistas. O espaço reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia. É um ótimo lugar para conhecer a cultura local e comprar souvenirs.</p>
-</article>
-
-<article>
-    <h4>Igreja do Bonfim</h4>
-    <figure><!--Foto-->
-    <img src = "img/igreja_do_bonfim.jpg" alt ="Igreja do Bonfim">
-    <figcaption>Localizada no bairro do Bonfim, é um dos símbolos religiosos mais importantes da Bahia, famosa pelas fitinhas coloridas e pela tradicional Lavagem do Bonfim.</figcaption>
-    </figure>    
-    <p>A Igreja do Senhor do Bonfim é um dos símbolos religiosos mais importantes da Bahia. Ela ficou famosa pelas fitinhas coloridas do Bonfim e pela tradicional Lavagem do Bonfim, festa religiosa e cultural que reúne milhares de pessoas todos os anos.</p>
-</article>
-
-<footer> <p>© 2026 Visita Salvador - Portal de Turismo</p> </footer>
-
+        <!-- História resumida -->
+        <section class="section-home">
+            <h2>Um pouco da história</h2>
+            <p>Salvador foi a primeira capital da colônia portuguesa nas Américas e desempenhou papel central na formação cultural do Brasil. 
+            A cidade é conhecida por sua arquitetura colonial, igrejas barrocas e pelo Pelourinho, patrimônio mundial da UNESCO.</p>
+        </section>
+        
     </main>
-</body>
-</html>
-    </main>
+    <footer id="footer">
+        <p>© 2026 Farol Turismo Digital - Portal de Turismo</p>
+    </footer>
 </body>
 </html>

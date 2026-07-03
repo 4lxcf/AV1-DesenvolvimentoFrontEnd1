@@ -1,33 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* =========================================
+   VARIÁVEIS GLOBAIS
+========================================= */
 :root {
-    /* Fontes */ 
     --font-title: 'Montserrat', sans-serif;
     --font-body: 'Lora', serif;
-
-    /* Paleta de Cores */
     --primary-color: #241e4e;
     --accent-color: #ffd046;
     --header-text-color: white;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: var(--font-body);
     background-color: var(--header-text-color);
     color: var(--primary-color);
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
-header{
+/* --- Cabeçalho e Navegação --- */
+header {
     display: flex;
     flex-direction: column;
     font-family: var(--font-title);
@@ -35,43 +36,35 @@ header{
     background-color: var(--primary-color);
     justify-content: space-around;
     align-items: center;
-    font-size: 18px;
-    height: 18vh;
-    position: fixed;
+    position: sticky;
     width: 100%;
+    height: 30vw;
     top: 0;
     z-index: 100;
 }
 
-.title-header{
+.title-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
 }
 
-.sub-title{
-    font-size: 24px;
+.title-header h1 {
+    font-size: clamp(1.25rem, 2.1vw, 1.5rem);
+}
+
+.title-header h2 {
+    font-size: clamp(0.75rem, 1vw, 1rem);
+}
+
+.sub-title {
+    font-size: clamp(1.2rem, 1.7vw, 1.5rem); 
     font-weight: 150;
     margin: 0;
 }
 
-h2{
-    font-family: var(--font-title);
-    font-weight: 600;
-    font-size: 36px;
-    text-align: center;
-    margin: 3.5rem;
-}
-
-h3{
-    font-family: var(--font-title);
-    font-size: 24px;
-    height: 50px;
-}
-
-nav{
-    font-size: min(1.2em, 40px);
+nav {
+    font-size: clamp(1rem, 1.5vw, 2rem);
     color: var(--header-text-color);
     display: flex;
     width: 100%;
@@ -80,100 +73,171 @@ nav{
     white-space: nowrap;
 }
 
+nav a:hover {
+    transform: scale(1.2);
+}
 
-a{
+a {
     text-decoration: none;
     color: var(--header-text-color);
     transition: all 0.3s ease;
+    font-size: clamp(0.75rem, 1.05vw, 1.2rem);
 }
 
-main{
+
+.logo {
+    width: 100%;
+}
+
+.menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    text-align: center;
+    margin: 3.5rem 0;
+    width: 100%;
+}
+
+h3 {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+h4{
+    font-family: var(--font-title);
+    font-size: clamp(1.2rem, 1.7vw, 2.5rem);
+    margin-bottom: 10px;
+}
+
+
+p {
+    font-size: clamp(1rem, 1.4vw, 1.6rem);
+    margin-bottom: 15px;
+}
+
+/* --- Estrutura Principal --- */
+main {
     text-align: justify;
     display: flex;
     flex-direction: column;
 }
 
-#onde-comer{
+#onde-comer {
     display: flex;
     flex-direction: column;
 }
 
 #onde-comer > p {
-    font-size: 24px;
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem); /* ~18px a 24px */
     text-align: justify;
     line-height: 35px;
     max-width: 800px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 50px auto;
     padding: 0 20px; 
 }
 
-
-.first-img{
+.first-img {
     width: 100%;
 }
 
-#principais-pratos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-article{
+article {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 460px;
-    border-radius: 15px 15px;
+    border-radius: 15px;
     margin: 25px;
-    overflow: hidden;
+    flex: 1;
+    overflow-y: auto;
     box-shadow: 0px 2px 5px var(--accent-color);
     transition: all 0.3s ease;
 }
 
+article:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
 
-
-figure{
+figure {
     width: 100%;
 }
 
-figure > img{
+figure > img {
     height: 200px;
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
     object-fit: cover;
 }
 
-.texto-prato{
-    padding: 8px;
+.texto-prato {
+    padding: 15px;
 }
 
 figcaption {
     display: none;
 }
 
-#novidades{
+#novidades {
     background-color: var(--primary-color);
     color: var(--header-text-color);
     padding: 25px;
-    font-size: large;
 }
 
-p{
-    margin-bottom: 15px;
-}
-
-footer{
+section.destaque {
     background-color: var(--primary-color);
+    height: 50vh;
     text-align: center;
 }
 
-#marca-dagua{
+section.destaque h2 {
     color: var(--header-text-color);
-    margin-bottom: 0px;
 }
 
-.dica-de-ouro{
+.section-home p {
+    line-height: 35px;
+    text-align: center;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+#curiosidade {
+    color: var(--header-text-color);
+    text-shadow:2px 1px var(--primary-color);
+    padding: 16px;
+    margin: 20px 15px;
+    border-radius: 12px;
+    border-left: 5px solid #ffb703;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border: 2px solid var(--accent-color);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#curiosidade h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 10px;
+    color: var(--header-text-color);
+    text-shadow:2px 1px var(--primary-color);
+}
+
+#curiosidade p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* --- Componente Dica de Ouro --- */
+.dica-de-ouro {
     position: fixed;
     bottom: 100px;
     right: 50px;
@@ -181,7 +245,7 @@ footer{
 }
 
 .botao-dica {
-    font-size: 30px;  /* aumenta o emoji */
+    font-size: clamp(24px, 4vw, 30px);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -207,64 +271,310 @@ footer{
     display: block;
 }
 
+.lista-destaques a{
+    font-size: clamp(1rem, 1.4vw, 1.6rem);
+}
 
-@media (max-width: 768px) {
-    
-    #principais-pratos {
-        flex-direction: column;
-    }
-    
-    #onde-comer > p {
-        font-size: 18px; /* Redução da escala tipográfica para mobile */
-        margin-bottom: 50px;
-    }
-    
-    header{
-        position:sticky;
-        height: 30vw;
-    }
+.hero{
+    background-image: url("../assets/img/baia_todos_santos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 
-    .title-header h1{
-        font-size: 7vw;
+    h2{
+        color: var(--header-text-color);
+        text-shadow:3px 2px var(--primary-color);
     }
+}
 
-    .title-header h2{
-        font-size: 5vw;
-    }
+.hero-content p{
+    background-color: rgba(255, 255, 255, 0.459);
+    width: 90%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
 
-    nav{
-        font-size: 2.5vw;
-    }
+.texto-ponto{
+    padding: 15px;
+}
 
-    article{
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+#footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ponto-turistico{
+    padding: 10px;
+}
+
+#footer p {
+    margin: 0;
+    color: var(--header-text-color);
+}
+
+#marca-dagua {
+    color: var(--header-text-color);
+    margin-bottom: 0px;
+}
+
+.lista-destaques li{
+        margin: 40px 0px;
+}
+
+#grandes-festivais p{
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    text-align: justify;
+    line-height: 35px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+#festas-populares p{
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    text-align: justify;
+    line-height: 35px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.bloco-evento{
+    padding: 10px;
+    width: 88vw;
+    height: fit-content;
+}
+
+#eventos{
+    display: flex;
+    flex-direction: column;
+}
+
+#iemanja{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 10vw;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+/* --- Seção Fale Conosco --- */
+#fale-conosco {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 460px;
-    border-radius: 15px 15px;
-    flex: 1;
-    margin: 25px;
-    overflow: scroll;
-    box-shadow: 0px 2px 5px var(--accent-color);
+    padding: 20px;
 }
-    .botao-dica{
-    transform: translate(40px,-40px);
+
+#fale-conosco p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* --- Formulário --- */
+#fale-conosco form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.campo-form2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo-form2 label {
+    font-family: var(--font-title);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    font-weight: 600;
+}
+
+.campo-form2 input,
+.campo-form2 textarea {
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.campo-form2 textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+#fale-conosco form button {
+    font-family: var(--font-title);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+/* =========================================
+   MEDIA QUERIES (TABLET & DESKTOP)
+========================================= */
+@media (min-width: 768px) {
+    
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
-}
 
-
-@media (min-width: 768px){
-    article{
-        width: 25vw;
+    header {
+        height: 18vh;
     }
 
-    article:hover{
-    cursor:pointer;
-    transform: scale(1.1);
-}
-}
+    main {
+        flex: 1;
+        display: flex;
+    }
 
+    a{
+        font-size: clamp(0.75rem, 1.05vw, 1.2rem);
+    }
 
-nav a:hover{
-    transform: scale(1.2);
+    #onde-comer > p {
+        margin-bottom: 100px;
+    }
+
+    #principais-pratos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2rem;
+        gap: 25px;
+        justify-items: center;
+        padding: 20px 0;
+    }
+
+    #principais-pratos h2 {
+        grid-column: 1 / -1;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: none;
+        height: 460px;
+        border-radius: 15px;
+        overflow-y: auto;
+        box-shadow: 0px 2px 5px var(--accent-color);
+        transition: all 0.3s ease;
+    }
+
+    .hero {
+        display: flex;
+        height: 80vh;
+    }
+
+    section.hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 3;
+    }
+
+    #curiosidade {
+        width: 14vw;
+        overflow-y: auto;
+        text-align: center;
+    }
+
+    #pontos-turisticos {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .ponto-turistico {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        img{
+            height: 40vh;
+        }
+    }
+
+    section.destaque{
+        height: 50vh;
+    }
+
+    .lista-destaques a{
+        transition: all 0.3s ease;
+    }
+    
+    .lista-destaques a:hover{
+        cursor: pointer;
+        color: var(--accent-color);
+        transform: scale(1.2);
+    }
+
+    .bloco-evento{
+        padding: 10px;
+        width: 100vw;
+        height: fit-content;
+    }
+
+    .eventos{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #iemanja{
+        display: flex;
+        flex-direction: row;
+        margin: 5vh 10vw;
+        padding: 5vh;
+        height: 30vh;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    #iemanja-content{
+        display: flex;
+        height: 100%;
+        width: 70%;
+        padding: 15px;
+    }
+
+    #iemanja-content p{
+        margin: auto 0;
+    }
+
+    #fale-conosco {
+        padding: 40px;
+    }
+
+    #fale-conosco form {
+        max-width: 700px;
+    }
 }

@@ -5,61 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Principais pontos turisticos de salvador.">
     <title>Pontos Turísticos</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>Farol Turismo Digital | Turismo Salvador Bahia</h1>
+        <div class="title-header">
+            <h1>SALVADOR</h1>
+            <h2 class="sub-title">BAHIA</h2>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pontos_turisticos.html">Pontos Turísticos</a></li>
-                <li><a href="gastronomia.html">Gastronomia</a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+        <nav id="navegacao">
+            <a href="index.html">Home</a>
+            <a href="pontos_turisticos.html">Pontos Turísticos</a>
+            <a href="gastronomia.html">Gastronomia</a>
+            <a href="eventos.html">Eventos</a>
+            <a href="contatos.html">Contato</a>
         </nav>
     </header>
-    
     <main>
-        <section id = "pontos_turisticos">
+        <section id = "pontos-turisticos">
             <h2>Pontos Turísticos de Salvador</h2>
-            <article>
-                <h4>Pelourinho</h4>
+            <article class="ponto-turistico">
                 <figure><!--Foto-->
-                    <img src = "img/pelourinho.jpg" alt = "Pelourinho">
-                    <figcaption>O Pelourinho é o centro histórico de Salvador e um dos locais mais famosos da Bahia. Conhecido pelas casa coloridas, ruas de pedra e igrejas antigas, o local representa a forte cultura afro-brasileira. Além da arqueitetura histórica, o Pelourinho possui apresentações musicais, restaurantes típicos e manifestações culturais durante todo o ano.</figcaption>
+                    <img src = "./assets/img/pelourinho.jpg" alt = "Pelourinho">
+                    <figcaption>Centro histórico de Salvador.</figcaption>
                 </figure>
-                <p>O Pelourinho é o centro histórico de Salvador e um dos locais mais famosos da Bahia. Conhecido pelas casa coloridas, ruas de pedra e igrejas antigas, o local representa a forte cultura afro-brasileira. Além da arqueitetura histórica, o Pelourinho possui apresentações musicais, restaurantes típicos e manifestações culturais durante todo o ano.</p>
+                <div class="texto-ponto">
+                <h3>Pelourinho</h3>
+                <p>Centro Histórico de Salvador e um dos locais mais famosos da Bahia. Conhecido pelas casa coloridas, ruas de pedra e igrejas antigas, o local representa a forte cultura afro-brasileira. Além da arqueitetura histórica, o Pelourinho possui apresentações musicais, restaurantes típicos e manifestações culturais durante todo o ano.</p>
+                </div>
             </article>
-            <article>
-                <h4>Elevador Lacerda</h4>
+            <article class="ponto-turistico">
                 <figure><!--Foto-->
-                    <img src = "img/elevador_lacerda.jpg" alt = "Elevador Lacerda">
-                    <figcaption>o elevador lacerda é um dos principais cartões-postais de Salvador. Inaugurado em 1873, ele liga a Cidade Alta à Cidade Baixa, facilitando o transporte entre as duas regiões. Do alto do elevador é possível observar uma bela vista da Baía de Todos-os-Santos.</figcaption>
+                    <img src = "./assets/img/elevador_lacerda.jpg" alt = "Elevador Lacerda">
+                    <figcaption>Um dos principais cartões-postais de Salvador.</figcaption>
                 </figure>
-                <p>O Elevador Lacerda é um dos principais cartões-postais de Salvador. Inaugurado em 1873, ele liga a Cidade Alta à Cidade Baixa, facilitando o transporte entre as duas regiões. Do alto do elevador é possível observar uma bela vista da Baía de Todos-os-Santos.</p>
+                <div class="texto-ponto">
+                <h3>Elevador Lacerda</h3>
+                <p>Um dos principais cartões-postais de Salvador. Inaugurado em 1873, ele liga a Cidade Alta à Cidade Baixa, facilitando o transporte entre as duas regiões. Do alto do elevador é possível observar uma bela vista da Baía de Todos-os-Santos.</p>
+                </div>
             </article>
-            <article>
-                <h4>Mercado Modelo</h4>
+            <article class="ponto-turistico">
                 <figure><!--Foto-->
-                    <img src = "img/mercado_modelo.jpg" alt = "Mercado Modelo">
-                    <figcaption>Localizado próximo ao Elevador Lacerda, o Mercado Modelo é um dos lugares mais visitados pelos turistas. O espaço reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia. É um ótimo lugar para conhecer a cultura local e comprar souvenirs.</figcaption>
+                    <img src = "./assets/img/mercado_modelo.jpg" alt = "Mercado Modelo">
+                    <figcaption>Espaço que reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia.</figcaption>
                 </figure>
-                <p>Localizado próximo ao Elevador Lacerda, o Mercado Modelo é um dos lugares mais visitados pelos turistas. O espaço reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia. É um ótimo lugar para conhecer a cultura local e comprar souvenirs.</p>
+                <div class="texto-ponto">
+                <h3>Mercado Modelo</h3>
+                <p>Localizado próximo ao Elevador Lacerda, é um dos lugares mais visitados pelos turistas. O espaço reúne lojas de artesanato, lembranças, roupas, instrumentos musicais e comidas típicas da Bahia. É um ótimo lugar para conhecer a cultura local e comprar souvenirs.</p>
+                </div>
             </article>
-            <article>
-                <h4>Igreja do Bonfim</h4>
+            <article class="ponto-turistico">
                 <figure><!--Foto-->
-                    <img src = "img/igreja_do_bonfim.jpg" alt ="Igreja do Bonfim">
-                    <figcaption>Localizada no bairro do Bonfim, é um dos símbolos religiosos mais importantes da Bahia, famosa pelas fitinhas coloridas e pela tradicional Lavagem do Bonfim.</figcaption>
-                </figure>    
-                <p>A Igreja do Senhor do Bonfim é um dos símbolos religiosos mais importantes da Bahia. Ela ficou famosa pelas fitinhas coloridas do Bonfim e pela tradicional Lavagem do Bonfim, festa religiosa e cultural que reúne milhares de pessoas todos os anos.</p>
+                    <img src = "./assets/img/igreja_do_bonfim.jpg" alt ="Igreja do Bonfim">
+                    <figcaption>Um dos símbolos religiosos mais importantes da Bahia.</figcaption>
+                </figure>
+                <div class="texto-ponto">
+                <h3>Igreja do Bonfim</h3>
+                <p>Um dos símbolos religiosos mais importantes da Bahia. Ela ficou famosa pelas fitinhas coloridas do Bonfim e pela tradicional Lavagem do Bonfim, festa religiosa e cultural que reúne milhares de pessoas todos os anos.</p>
+                </div>
             </article>
-
-            <footer> <p>© 2026 Farol Turismo Digital - Portal de Turismo</p> </footer>
-
-        </main>
+        </section>  
+    </main>
+    <footer id="footer">
+        <p id="marca-dagua">&copy; 2026 Turistando em Salvador - Projeto de Faculdade.</p>
+    </footer>
 </body>
 </html>

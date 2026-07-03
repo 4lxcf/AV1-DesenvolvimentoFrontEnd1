@@ -262,7 +262,8 @@ section.destaque h2 {
     color: var(--primary-color);
     border-radius: 10px;
     padding: 15px;
-    width: 250px;
+    height: fit-content;
+    width: 20vw;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
     margin-bottom: 10px;
 }
@@ -390,20 +391,20 @@ footer {
     gap: 20px;
 }
 
-.campo-form2 {
+.campo {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.campo-form2 label {
+.campo label {
     font-family: var(--font-title);
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     font-weight: 600;
 }
 
-.campo-form2 input,
-.campo-form2 textarea {
+.campo input,
+.campo textarea {
     font-family: var(--font-body);
     font-size: clamp(0.9rem, 1.2vw, 1.1rem);
     padding: 12px;
@@ -411,22 +412,58 @@ footer {
     width: 100%;
 }
 
-.campo-form2 textarea {
+.campo textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-#fale-conosco form button {
-    font-family: var(--font-title);
-    font-size: clamp(1rem, 1.4vw, 1.2rem);
-    padding: 14px;
-    border-radius: 8px;
+.sucesso {
+  display: none;          /* oculto por padrão */
+  text-align: center;
+  padding: 1.5rem 0;
+  animation: aparecer 0.4s ease;
+}
+
+.sucesso.visivel {
+    display: block;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    background: var(--primary-color);
+    color: #F8FAFC;
     border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
     cursor: pointer;
-    align-self: center;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 10px;
+    width: auto;
+    transition: background 0.2s;
+}
+
+.sucesso button:hover {
+  background: var(--accent-color);
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* O container cinza de fundo */
+.barra-container {
+    width: 50vw;
+    height: 4px; /* Espessura da barra */
+    background-color: var(--header-text-color); /* Cor de fundo neutra */
+    overflow: hidden;
+}
+
+/* A barra que vai encher */
+#barra-progresso {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent-color); /* Cor da barra (escolha uma que combine com seu site) */
+    /* Transição suave de 4000ms (4 segundos) usando uma aceleração linear */
+    transition: width 4000ms linear; 
 }
 
 /* =========================================

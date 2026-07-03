@@ -417,19 +417,6 @@ footer {
     min-height: 120px;
 }
 
-#fale-conosco form button {
-    font-family: var(--font-title);
-    font-size: clamp(1rem, 1.4vw, 1.2rem);
-    padding: 14px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    align-self: center;
-    width: 100%;
-    max-width: 300px;
-    margin-top: 10px;
-}
-
 .sucesso {
   display: none;          /* oculto por padrão */
   text-align: center;
@@ -438,19 +425,19 @@ footer {
 }
 
 .sucesso.visivel {
-  display: block;
+    display: block;
 }
 
-.sucesso button {
-  padding: 0.7rem 1.5rem;
-  background: var(--primary-color);
-  color: #F8FAFC;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  width: auto;
-  transition: background 0.2s;
+button {
+    padding: 0.7rem 1.5rem;
+    background: var(--primary-color);
+    color: #F8FAFC;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: auto;
+    transition: background 0.2s;
 }
 
 .sucesso button:hover {
@@ -460,6 +447,23 @@ footer {
 @keyframes aparecer {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* O container cinza de fundo */
+.barra-container {
+    width: 50vw;
+    height: 4px; /* Espessura da barra */
+    background-color: var(--header-text-color); /* Cor de fundo neutra */
+    overflow: hidden;
+}
+
+/* A barra que vai encher */
+#barra-progresso {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent-color); /* Cor da barra (escolha uma que combine com seu site) */
+    /* Transição suave de 4000ms (4 segundos) usando uma aceleração linear */
+    transition: width 4000ms linear; 
 }
 
 /* =========================================

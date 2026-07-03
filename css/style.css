@@ -11,7 +11,6 @@
     --header-text-color: white;
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -101,7 +100,6 @@ a {
     justify-content: space-around;
 }
 
-
 h1 {
     font-size: clamp(2rem, 4vw, 3rem);
 }
@@ -122,6 +120,7 @@ h3 {
 h4{
     font-family: var(--font-title);
     font-size: clamp(1.2rem, 1.7vw, 2.5rem);
+    margin-bottom: 10px;
 }
 
 
@@ -188,7 +187,7 @@ figure {
 figure > img {
     height: 200px;
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 10px 10px;
     object-fit: cover;
 }
 
@@ -294,7 +293,7 @@ section.destaque h2 {
     background-image: url("../assets/img/baia_todos_santos.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-clip: center;
+    background-position: center;
 
     h2{
         color: var(--header-text-color);
@@ -309,12 +308,9 @@ section.destaque h2 {
     backdrop-filter: blur(10px);
 }
 
-
 .texto-ponto{
     padding: 15px;
 }
-
-
 
 footer {
     background-color: var(--primary-color);
@@ -328,6 +324,10 @@ footer {
     justify-content: center;
 }
 
+.ponto-turistico{
+    padding: 10px;
+}
+
 #footer p {
     margin: 0;
     color: var(--header-text-color);
@@ -338,6 +338,38 @@ footer {
     margin-bottom: 0px;
 }
 
+.lista-destaques li{
+        margin: 40px 0px;
+}
+
+#grandes-festivais p{
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    text-align: justify;
+    line-height: 35px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+#festas-populares p{
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    text-align: justify;
+    line-height: 35px;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.bloco-evento{
+    padding: 10px;
+    width: 88vw;
+    height: fit-content;
+}
+
+#eventos{
+    display: flex;
+    flex-direction: column;
+}
 
 /* =========================================
    MEDIA QUERIES (TABLET & DESKTOP)
@@ -398,7 +430,6 @@ footer {
         text-align: center;
     }
 
-
     #pontos-turisticos {
         display: flex;
         flex-direction: column;
@@ -416,20 +447,10 @@ footer {
         img{
             height: 40vh;
         }
-        h4{
-            margin-bottom: 10px;
-        }
     }
-
-
-    
 
     section.destaque{
         height: 70vh;
-    }
-
-    .lista-destaques li{
-        margin: 20px 0;
     }
 
     .lista-destaques a{
@@ -440,5 +461,16 @@ footer {
         cursor: pointer;
         color: var(--accent-color);
         transform: scale(1.2);
+    }
+
+    .bloco-evento{
+        padding: 10px;
+        width: 100vw;
+        height: fit-content;
+    }
+
+    #eventos{
+        display: flex;
+        flex-direction: row;
     }
 }

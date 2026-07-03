@@ -1,33 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* =========================================
+   VARIÁVEIS GLOBAIS
+========================================= */
 :root {
-    /* Fontes */ 
     --font-title: 'Montserrat', sans-serif;
     --font-body: 'Lora', serif;
-
-    /* Paleta de Cores */
     --primary-color: #241e4e;
     --accent-color: #ffd046;
     --header-text-color: white;
 }
 
-*{
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: var(--font-body);
     background-color: var(--header-text-color);
     color: var(--primary-color);
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
-header{
+/* --- Cabeçalho e Navegação --- */
+header {
     display: flex;
     flex-direction: column;
     font-family: var(--font-title);
@@ -35,42 +37,35 @@ header{
     background-color: var(--primary-color);
     justify-content: space-around;
     align-items: center;
-    font-size: 18px;
-    height: 18vh;
-    position: fixed;
+    position: sticky;
     width: 100%;
+    height: 30vw;
     top: 0;
     z-index: 100;
 }
 
-.title-header{
+.title-header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.sub-title{
-    font-size: 24px;
+.title-header h1 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.title-header h2 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.sub-title {
+    font-size: clamp(1.2rem, 1.7vw, 1.5rem); 
     font-weight: 150;
     margin: 0;
 }
 
-h2{
-    font-family: var(--font-title);
-    font-weight: 600;
-    font-size: 36px;
-    text-align: center;
-    margin: 3.5rem;
-}
-
-h3{
-    font-family: var(--font-title);
-    font-size: 24px;
-    height: 50px;
-}
-
-nav{
-    font-size: 1.5vw;
+nav {
+    font-size: clamp(1rem, 1.5vw, 2rem);
     color: var(--header-text-color);
     display: flex;
     width: 100%;
@@ -79,103 +74,185 @@ nav{
     white-space: nowrap;
 }
 
+nav a:hover {
+    transform: scale(1.2);
+}
 
-a{
+a {
     text-decoration: none;
     color: var(--header-text-color);
     transition: all 0.3s ease;
+    font-size: clamp(2vw, 2.5vw, 1.7rem);
 }
 
-main{
+.logo {
+    width: 100%;
+}
+
+.logo h1 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    text-align: center;
+}
+
+.menu {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    text-align: center;
+    margin: 3.5rem;
+}
+
+h3 {
+    font-family: var(--font-title);
+    font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+h4{
+    font-family: var(--font-title);
+    font-size: clamp(1.2rem, 1.7vw, 2.5rem);
+}
+
+
+p {
+    font-size: clamp(1rem, 1.4vw, 1.6rem);
+    margin-bottom: 15px;
+}
+
+/* --- Estrutura Principal --- */
+main {
     text-align: justify;
     display: flex;
     flex-direction: column;
 }
 
-#onde-comer{
+#onde-comer {
     display: flex;
     flex-direction: column;
 }
 
 #onde-comer > p {
-    font-size: 24px;
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem); /* ~18px a 24px */
     text-align: justify;
     line-height: 35px;
     max-width: 800px;
-    margin: 0 auto 100px auto;
+    margin: 0 auto 50px auto;
     padding: 0 20px; 
 }
 
-
-.first-img{
+.first-img {
     width: 100%;
 }
 
-#principais-pratos{
+/* --- Seção de Pratos --- */
+#principais-pratos {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-article{
+article {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 460px;
-    border-radius: 15px 15px;
+    border-radius: 15px;
     margin: 25px;
-    overflow: hidden;
+    flex: 1;
+    overflow-y: auto;
     box-shadow: 0px 2px 5px var(--accent-color);
     transition: all 0.3s ease;
 }
 
-article:hover{
-    cursor:pointer;
-    transform: scale(1.1);
+article:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
-figure{
+figure {
     width: 100%;
 }
 
-figure > img{
+figure > img {
     height: 200px;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
 }
 
-.texto-prato{
-    padding: 8px;
+.texto-prato {
+    padding: 15px;
 }
 
 figcaption {
     display: none;
 }
 
-#novidades{
+#novidades {
     background-color: var(--primary-color);
     color: var(--header-text-color);
     padding: 25px;
-    font-size: large;
 }
 
-p{
-    margin-bottom: 15px;
-}
-
-footer{
+section.destaque {
     background-color: var(--primary-color);
+    height: 50vh;
     text-align: center;
 }
 
-#marca-dagua{
+section.destaque h2 {
     color: var(--header-text-color);
-    margin-bottom: 0px;
 }
 
-.dica-de-ouro{
+.section-home p {
+    line-height: 35px;
+    text-align: center;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+#curiosidade {
+    color: var(--header-text-color);
+    text-shadow:2px 1px var(--primary-color);
+    padding: 16px;
+    margin: 20px 15px;
+    border-radius: 12px;
+    border-left: 5px solid #ffb703;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border: 2px solid var(--accent-color);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#curiosidade h3 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 10px;
+    color: var(--header-text-color);
+    text-shadow:2px 1px var(--primary-color);
+}
+
+#curiosidade p {
+    line-height: 1.6;
+}
+
+/* --- Componente Dica de Ouro --- */
+.dica-de-ouro {
     position: fixed;
     bottom: 100px;
     right: 50px;
@@ -183,7 +260,7 @@ footer{
 }
 
 .botao-dica {
-    font-size: 30px;  /* aumenta o emoji */
+    font-size: clamp(24px, 4vw, 30px);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -209,168 +286,120 @@ footer{
     display: block;
 }
 
-
-@media (max-width: 768px) {
-    
-    #principais-pratos {
-        flex-direction: column;
-    }
-    
-    #onde-comer > p {
-        font-size: 18px; /* Redução da escala tipográfica para mobile */
-        margin-bottom: 50px;
-    }
-    
-    header{
-        position:sticky;
-        height: 30vw;
-    }
-
-    .title-header h1{
-        font-size: 7vw;
-    }
-
-    .title-header h2{
-        font-size: 5vw;
-    }
-
-    nav{
-        font-size: 2.5vw;
-    }
-
-    article{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 460px;
-    border-radius: 15px 15px;
-    flex: 1;
-    margin: 25px;
-    overflow: scroll;
-    box-shadow: 0px 2px 5px var(--accent-color);
-}
+.lista-destaques a{
+    font-size: clamp(1rem, 1.4vw, 1.6rem);
 }
 
+.hero{
+    background-image: url("../assets/img/baia_todos_santos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: center;
 
-@media (min-width: 768px){
-    article{
-        width: 25vw;
+    h2{
+        color: var(--header-text-color);
+        text-shadow:3px 2px var(--primary-color);
     }
 }
 
-
-nav a:hover{
-    transform: scale(1.2);
+.hero-content p{
+    background-color: rgba(255, 255, 255, 0.459);
+    width: 90%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
 }
 
 
-.logo{
-    width: 100%;
+.texto-ponto{
+    padding: 15px;
 }
-.logo h1{
-    font-size: 2.6vw;
+
+
+
+footer {
+    background-color: var(--primary-color);
     text-align: center;
 }
 
-.menu{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-section.destaque{
-background-color: var(--primary-color);
-height: 50vh;
-text-align: center;
-}
-section.destaque h2{
-    color: var(--header-text-color);
-}
-
-.section-home p {
-    line-height: 35px;
-    font-size: 1.5rem;
-    text-align: center;
-    margin: 0 auto 100px auto;
-    padding: 0 20px;
-    width: 100%;
-}
-
-#footer{
+#footer {
     height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#footer p{
+
+#footer p {
     margin: 0;
     color: var(--header-text-color);
 }
 
-#curiosidade{
-    padding: 16px;
-    margin: 20px 15px;
-    border-radius: 12px;
-    border-left: 5px solid #ffb703;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
-    border: 2px solid var(--accent-color);
+#marca-dagua {
+    color: var(--header-text-color);
+    margin-bottom: 0px;
 }
 
-#curiosidade h3{
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
 
-#curiosidade p{
-    line-height: 1.6;
-}
-
-@media (min-width:768px) {
-    header{
-        position: relative;
-    }
-
-    body{
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* =========================================
+   MEDIA QUERIES (TABLET & DESKTOP)
+========================================= */
+@media (min-width: 768px) {
     
-}
-    main{
-    flex: 1;
-    display: flex;
-}
-    p, a{
-        font-size: 1.6rem;
-    }
-    h1{
-        font-size: 4rem;
-    }
-    h2{
-        font-size: 2.7rem;
-    }
-    h3{
-        font-size: 3rem;
-    }
-    .hero{
+    body {
+        margin: 0;
+        min-height: 100vh;
         display: flex;
-        height: 60vh;
+        flex-direction: column;
     }
-    section.hero{
+
+    header {
+        height: 18vh;
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+    }
+
+    a{
+        font-size: clamp(1rem, 1.4vw, 1.6rem);
+    }
+
+    #onde-comer > p {
+        margin-bottom: 100px;
+    }
+
+    #principais-pratos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    article {
+        width: 25vw;
+        flex: initial;
+    }
+
+    .hero {
+        display: flex;
+        height: 80vh;
+    }
+
+    section.hero-content {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         flex: 3;
     }
-    #curiosidade{
-        width: 15vw;
+
+    #curiosidade {
+        width: 14vw;
+        overflow-y: auto;
+        text-align: center;
     }
 
-    #pontos-turisticos{
+
+    #pontos-turisticos {
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -378,11 +407,38 @@ section.destaque h2{
         justify-content: center;
         margin-bottom: 2rem;
     }
+
+    .ponto-turistico {
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        img{
+            height: 40vh;
+        }
+        h4{
+            margin-bottom: 10px;
+        }
+    }
+
+
     
-    .ponto-turistico{
-    width: 70vw;
-    justify-self: center;
 
-}
+    section.destaque{
+        height: 70vh;
+    }
 
+    .lista-destaques li{
+        margin: 20px 0;
+    }
+
+    .lista-destaques a{
+        transition: all 0.3s ease;
+    }
+    
+    .lista-destaques a:hover{
+        cursor: pointer;
+        color: var(--accent-color);
+        transform: scale(1.2);
+    }
 }
